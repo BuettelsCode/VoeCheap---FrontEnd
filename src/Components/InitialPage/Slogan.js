@@ -17,7 +17,7 @@ height: 613px;
 display: flex;
 justify-content: center;
 align-items: center;
-background-image: url("https://www.segueviagem.com.br/wp-content/uploads/2019/11/shutterstock_41857165_torre-belem-3.jpg");
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgbMrCuhfVvz6c_Hq6MXhQ1a9suDPssY0rrkCXOMYc79B3Ab_9");
 background-size:cover;
 background-position: center center;
 position: relative;
