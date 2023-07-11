@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import capa from "../../Assets/CAPA.jpg"
 
 export default function Slogan() {
     return (<>
@@ -17,7 +17,7 @@ height: 613px;
 display: flex;
 justify-content: center;
 align-items: center;
-background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgbMrCuhfVvz6c_Hq6MXhQ1a9suDPssY0rrkCXOMYc79B3Ab_9");
+background-image: url(${capa});
 background-size:cover;
 background-position: center center;
 position: relative;

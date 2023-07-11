@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import check from "../../Assets/check.png"
 import asterisc from "../../Assets/asterics 1.png"
+import { Link } from "react-router-dom"
 
 export default function Pack({ p }) {
     return (<>
@@ -9,13 +10,13 @@ export default function Pack({ p }) {
                 <div>{p.price}</div>
             </Image>
             <Destiny><div>{p.destiny}</div></Destiny>
-            <Container destiny ={p.destiny}>
-                <div><img src={check} /> {p.departureTax}</div>
-                <div><img src={check} /> {p.support}</div>
-                <div><img src={check} /> {p.baggage}</div>
-                {p.destiny === 'Lisboa' ? <DivLisboa><img src={asterisc} /> {p.tickets}</DivLisboa> : <div><img src={check} /> {p.tickets}</div> }
+            <Container destiny={p.destiny}>
+                <div><img src={check} alt="check" /> {p.departureTax}</div>
+                <div><img src={check} alt="check" /> {p.support}</div>
+                <div><img src={check} alt="check" /> {p.baggage}</div>
+                {p.destiny === 'Lisboa' ? <DivLisboa><img src={asterisc} alt="asterisco" /> {p.tickets}</DivLisboa> : <div><img src={check} alt="check" /> {p.tickets}</div>}
             </Container>
-            <Button><div>FALE COM CONSULTOR</div></Button>
+            <Link style = {{textDecoration:"none"}} to = {"/information"}> <Button><div>FALE COM CONSULTOR</div></Button> </Link>
         </Packet>
     </>)
 }
@@ -94,5 +95,10 @@ div{
     font-weight: bold;
 font-family: 'Roboto', sans-serif;
 color: #013881;
+cursor: pointer;
+transition: background-color 0.3s ease;
+&:hover {
+     background-color: rgba(1, 56, 129, 0.5);
+}
 }
 `
