@@ -1,9 +1,20 @@
 import styled from "styled-components"
 import check from "../../Assets/check.png"
 import asterisc from "../../Assets/asterics 1.png"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import UserContext from "../../contexts/ContextApi";
 
 export default function Pack({ p }) {
+
+    const { setPackSelect } = useContext(UserContext);
+    const navigate = useNavigate();
+
+    function reservarPack() {
+        setPackSelect(p.destiny);
+        navigate("/information");
+    }
+
     return (<>
         <Packet>
             <Image img={p.image}>
@@ -16,7 +27,7 @@ export default function Pack({ p }) {
                 <div><img src={check} alt="check" /> {p.baggage}</div>
                 {p.destiny === 'Lisboa' ? <DivLisboa><img src={asterisc} alt="asterisco" /> {p.ticket}</DivLisboa> : <div><img src={check} alt="check" /> {p.ticket}</div>}
             </Container>
-            <Link style = {{textDecoration:"none"}} to = {"/information"}> <Button><div>FALE COM CONSULTOR</div></Button> </Link>
+            <Button onClick={reservarPack}><div>FALE COM CONSULTOR</div></Button>
         </Packet>
     </>)
 }

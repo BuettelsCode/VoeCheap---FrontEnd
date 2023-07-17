@@ -7,9 +7,10 @@ import Team from "../Components/InitialPage/Team";
 import Footer from "../Components/InitialPage/Footer";
 
 export default function InitialPage() {
+    
     return (<>
         <Container>
-            <Header />
+            <Header/>
             <Slogan />
             <Packages />
             <Clients/>

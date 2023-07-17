@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <>
 
-            <Container photoFooter={photoFooter}>
+            <Container photoFooter={photoFooter} id="contact">
                 <Contact>CONTATO:
 
                 </Contact>

@@ -42,18 +42,19 @@ export default function Clients() {
 
     return (
         <>
-            <Container>
+            <Container id="client">
                 <Title>NOSSOS CLIENTES INDICAM! <img src={logoInsta} alt="logoinsta" /></Title>
                 <Recommendations>
                     <ClientText>{clientTexts[currentTextIndex]}</ClientText>
+                   
+                    <ArrowLeft src={arrowLeft} onClick={() => handleArrowClick('left')} />
+                    <ArrowRight src={arrowRight} onClick={() => handleArrowClick('right')} />
+                    <ClientContainer>
                     <Stories >
                         {images.map((i, index) => (
                             <Story key={index} isActive={index === currentImageIndex} />
                         ))}
                     </Stories>
-                    <ArrowLeft src={arrowLeft} onClick={() => handleArrowClick('left')} />
-                    <ArrowRight src={arrowRight} onClick={() => handleArrowClick('right')} />
-                    <ClientContainer>
                         <ClientImage src={images[currentImageIndex]}
                             slideDirection={slideDirection}
                             onTransitionEnd={handleTransitionEnd} />
@@ -74,7 +75,7 @@ justify-content: space-evenly;
 
 `
 const Title = styled.h1`
-margin-top: -30px;
+margin-top: -350px;
 font-weight: bold;
 font-family: 'Roboto', sans-serif;
 color: #013881;
@@ -90,20 +91,24 @@ position: relative;
 `
 const ArrowLeft = styled.img`
 position: absolute;
-left: -100px;
-top:200px;
+left: -550px;
+top:-150px;
 width: 30px;
+cursor: pointer;
 `
 const ArrowRight = styled.img`
 position: absolute;
-right: -102px;
-top:200px;
+right: -550px;
+top:-150px;
 width: 30px;
-
+cursor: pointer;
 `
 const ClientImage = styled.img`
   width: 300px;
-  transition: transform 0.3s ease;
+  top: -340px;
+  left: -300px;
+  position: absolute;
+  transition: all 0.3s ease-out;
   transform: ${({ slideDirection }) =>
         slideDirection === "slide-left" ? "translateX(-5%)" : slideDirection === "slide-right" ? "translateX(5%)" : "none"};
 `
@@ -112,9 +117,13 @@ const Stories = styled.div`
   align-items: center;
   justify-content: flex-start; 
   height: 10px;
+  position: absolute;
+  top: -350px;
+  width: 310px;
+  left: -305px;
 `
 const Story = styled.div`
-  flex-grow: 1; /* Ocupar espaço disponível */
+  flex-grow: 1;
   height: 3px;
   background-color: ${({ isActive }) => (isActive ? "#013881" : "#CCC")};
   border-radius: 15%;
@@ -125,15 +134,19 @@ const ClientText = styled.div`
   font-size: 18px;
   position: absolute;
   padding: 10px 20px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #F0F0F0;
   background-color: white;
   border-radius: 10px;
-  width: fit-content;
-  max-width: 300px;
-left: -480px;
-top: 100px;
+  /* width: fit-content; */
+  width: 300px;
+left: 50px;
+top: -300px;
  `
 const ClientContainer = styled.div`
   display: flex;
   align-items: center;
-`
+  flex-direction: column;
 
+`

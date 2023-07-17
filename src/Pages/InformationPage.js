@@ -1,48 +1,73 @@
 import styled from "styled-components";
+import arrowLeft from "../Assets/ArrowLeft.png";
+import { Link } from "react-router-dom";
+import logo from "../Assets/logo.png";
+import { useContext } from "react";
+import UserContext from "../contexts/ContextApi";
+import { useState } from "react";
 
 export default function InformationPage() {
 
+    const { packSelect } = useContext(UserContext);
+    const [name, setName] = useState("");
+    const [whatsApp, setWhatsApp] = useState("");
+    const [originCity, setOriginCity] = useState("");
+    const [departureDate, setDepartureDate] = useState("");
+    const [returnDate, setReturnDate] = useState("");
+
     function submit(e) {
         e.preventDefault();
+        let message;
+        if (returnDate === "") {
+            message = `Olá meu nome é ${name}, gostaria de está vendo um pacote para ${packSelect},
+             saindo de ${originCity} com data de ida sendo ${departureDate} sem data de volta`;
+        }else{
+            message = `Olá meu nome é ${name}, gostaria de está vendo um pacote para ${packSelect}, saindo de ${originCity} com data de ida sendo ${departureDate}
+        com volta para o dia ${returnDate}`;
+        }
+        const encode = encodeURIComponent(message);
+        window.open(`https://wa.me/5532998252663?text=${encode}`);
     }
 
     return (
         <FormContainer>
-
+            <Logo src={logo} alt="logo" />
             <StyledForm>
                 <Informations onSubmit={submit}>
-                    <label for="name">Nome:</label>
-                    <Input type="text" id="name" name="name" required />
+                    <label for="name">Nome:</label>  <Link style={{ textDecoration: "none" }} to={"/"}><Back src={arrowLeft} /></Link>
+                    <Input type="text" id="name" name="name" value={name}
+                        onChange={(e) => setName(e.target.value)} required />
 
                     <label for="whatsapp">WhatsApp:</label>
-                    <Input type="text" id="whatsapp" name="whatsapp" required />
+                    <Input type="text" id="whatsapp" name="whatsapp" value={whatsApp}
+                        onChange={(e) => setWhatsApp(e.target.value)} required />
 
                     <label for="originCity">Origem:</label>
-                    <Input type="text" id="originCity" name="originCity" required />
+                    <Input type="text" id="originCity" name="originCity" value={originCity}
+                        onChange={(e) => setOriginCity(e.target.value)} required />
 
                     <label for="destinationCity">Destino:</label>
-                    <Input type="text" id="destinationCity" name="destinationCity" required />
+                    <Input type="text" id="destinationCity" name="destinationCity" defaultValue={packSelect}
+                        readOnly style={{ color: "black" }} required />
 
                     <label for="departureDate">Data de ida:</label>
-                    <Input type="date" id="departureDate" name="departureDate" required />
+                    <Input type="date" id="departureDate" name="departureDate" style={{ color: "black" }} value={departureDate}
+                        onChange={(e) => setDepartureDate(e.target.value)} required />
 
                     <label for="returnDate">Data de volta:</label>
-                    <Input type="date" id="returnDate" name="returnDate" />
-
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message"></textarea>
+                    <Input type="date" id="returnDate" name="returnDate" style={{ color: "black" }} value={returnDate}
+                        onChange={(e) => setReturnDate(e.target.value)} />
 
                     <Button type="submit"><h1>Enviar</h1></Button>
                 </Informations>
             </StyledForm>
-
-
         </FormContainer>
     );
 }
 
 const FormContainer = styled.div`
  display: flex;
+ flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -62,6 +87,19 @@ color: #8707ff;
  padding: 10px 25px;
  background: transparent;
     }
+    input{
+        color: black;
+    }
+`
+const Back = styled.img`
+position: absolute;
+width: 15px;
+left: 30px;
+top: 25px;
+`
+const Logo = styled.img`
+width: 300px;
+margin-bottom: 10px;
 `
 
 const Input = styled.input`
@@ -75,9 +113,11 @@ color: #8707ff;
 const StyledForm = styled.div`
     background-color: white;
   width: 500px;
+  position: relative;
   padding-top: 5px;
   border-radius: 11px;
-
+  font-weight: bold;
+font-family: 'Roboto', sans-serif;
 `
 const Button = styled.button`
  margin-bottom:10px;

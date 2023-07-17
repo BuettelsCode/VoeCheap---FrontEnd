@@ -6,7 +6,7 @@ import imgYuri from "../../Assets/photo_Yuri.png"
 export default function Team(){
     return(
         <>
-        <Container>
+        <Container id="team">
             <SubContainer>
             <Title>CONHEÇA NOSSA EQUIPE QUE ESTÁ SEMPRE PRONTA PARA ENCONTRAR AS MELHORES OFERTAS PARA REALIZAR O SEU SONHO DE CONHECER O MUNDO!</Title>
             <PhotosTop><Photo1><img src={imgPaulo}/><h1>PAULO</h1></Photo1> <Photo2><img src={imgIago}/> <h1>IAGO</h1></Photo2></PhotosTop> 
