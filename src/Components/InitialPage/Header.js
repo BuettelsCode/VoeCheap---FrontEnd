@@ -23,7 +23,7 @@ export default function Header() {
     function Wpp(){
         const message = "Olá, gostaria de saber mais informações sobre os pacotes de viagem";
         const encode = encodeURIComponent(message);
-        window.open(`https://wa.me/5532998252663?text=${encode}`);
+        window.open(`https://wa.me/553284186537?text=${encode}`);
     }
     
     return (<>

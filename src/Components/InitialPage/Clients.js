@@ -133,17 +133,18 @@ const ClientText = styled.div`
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   position: absolute;
-  padding: 10px 20px;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #F0F0F0;
   background-color: white;
-  border-radius: 10px;
-  /* width: fit-content; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px;
+  margin: 10px;
   width: 300px;
-left: 50px;
-top: -300px;
- `
+  left: 50px;
+  top: -300px;
+  border: 5px solid #013881;
+`;
+
 const ClientContainer = styled.div`
   display: flex;
   align-items: center;
