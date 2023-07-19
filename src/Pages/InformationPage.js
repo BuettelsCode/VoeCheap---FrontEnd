@@ -15,14 +15,20 @@ export default function InformationPage() {
     const [departureDate, setDepartureDate] = useState("");
     const [returnDate, setReturnDate] = useState("");
 
+    function formatarData(data) {
+        const [ano, mes, dia] = data.split('-');
+        return `${dia}/${mes}/${ano}`;
+      }
+
     function submit(e) {
         e.preventDefault();
         let message;
-        const formattedDepartureDate = new Date(departureDate).toLocaleDateString('pt-BR');
+        const formattedDepartureDate = formatarData(departureDate);
+        console.log(formattedDepartureDate);
         if (returnDate === "") {
             message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre um pacote de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate}, sem data de retorno.`;
         } else {
-            const formattedReturnDate = new Date(returnDate).toLocaleDateString('pt-BR');
+           const formattedReturnDate = formatarData(returnDate);
             message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre um pacote de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate} e com retorno programado para o dia ${formattedReturnDate}.`;
         }
         const encode = encodeURIComponent(message);
