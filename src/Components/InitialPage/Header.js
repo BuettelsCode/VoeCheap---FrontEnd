@@ -21,7 +21,7 @@ export default function Header() {
     };
 
     function Wpp(){
-        const message = "Olá, gostaria de saber mais informações sobre os pacotes de viagem";
+        const message = "Olá, gostaria de obter mais informações sobre os pacotes de viagem, por favor.";
         const encode = encodeURIComponent(message);
         window.open(`https://wa.me/553284186537?text=${encode}`);
     }

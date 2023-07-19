@@ -19,11 +19,9 @@ export default function InformationPage() {
         e.preventDefault();
         let message;
         if (returnDate === "") {
-            message = `Olá meu nome é ${name}, gostaria de está vendo um pacote para ${packSelect},
-             saindo de ${originCity} com data de ida sendo ${departureDate} sem data de volta`;
+            message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre um pacote de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${departureDate}, sem data de retorno.`;
         }else{
-            message = `Olá meu nome é ${name}, gostaria de está vendo um pacote para ${packSelect}, saindo de ${originCity} com data de ida sendo ${departureDate}
-        com volta para o dia ${returnDate}`;
+            message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre um pacote de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${departureDate} e com retorno programado para o dia ${returnDate}.`;
         }
         const encode = encodeURIComponent(message);
         window.open(`https://wa.me/553284186537?text=${encode}`);
