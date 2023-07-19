@@ -13,7 +13,7 @@ export default function Packages() {
     ]
 
     return (<>
-        <Title>PRINCIPAIS PACOTES</Title>
+        <Title>PRINCIPAIS PASSAGENS</Title>
         <Container id="packages">
             {packs.map((p) => (<Pack p={p} />))}
         </Container>

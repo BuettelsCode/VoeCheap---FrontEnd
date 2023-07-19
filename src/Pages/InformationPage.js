@@ -26,10 +26,10 @@ export default function InformationPage() {
         const formattedDepartureDate = formatarData(departureDate);
         console.log(formattedDepartureDate);
         if (returnDate === "") {
-            message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre um pacote de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate}, sem data de retorno.`;
+            message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre uma passagem de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate}, sem data de retorno.`;
         } else {
            const formattedReturnDate = formatarData(returnDate);
-            message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre um pacote de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate} e com retorno programado para o dia ${formattedReturnDate}.`;
+            message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre uma passagem de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate} e com retorno programado para o dia ${formattedReturnDate}.`;
         }
         const encode = encodeURIComponent(message);
         window.open(`https://wa.me/553284186537?text=${encode}`);

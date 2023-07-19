@@ -21,7 +21,7 @@ export default function Header() {
     };
 
     function Wpp(){
-        const message = "Olá, gostaria de obter mais informações sobre os pacotes de viagem, por favor.";
+        const message = "Olá, gostaria de obter mais informações sobre as passagens de viagem, por favor.";
         const encode = encodeURIComponent(message);
         window.open(`https://wa.me/553284186537?text=${encode}`);
     }
@@ -30,7 +30,7 @@ export default function Header() {
         <Head>
             <Logo src={logo} alt="logo" />
             <Options>
-                <h2 onClick={PacksClick}>PACOTES</h2>
+                <h2 onClick={PacksClick}>PASSAGENS</h2>
                 <h2 onClick={ClientsClick}>DEPOIMENTOS</h2>
                 <h2 onClick={TeamClick}>EQUIPE</h2>
                 <h2 onClick={ContactClick}>CONTATO</h2>
