@@ -3,7 +3,6 @@ import photoFooter from "../../Assets/photoFooter.png"
 import wpp from "../../Assets/wpp.png"
 import cadastur from "../../Assets/cadastur-logo.png"
 
-
 export default function Footer() {
     return (
         <>

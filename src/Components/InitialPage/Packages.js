@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import Pack from "./Pack"
-import { useRef } from "react"
 
 export default function Packages() {
     

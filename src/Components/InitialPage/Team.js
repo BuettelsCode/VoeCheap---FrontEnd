@@ -9,8 +9,8 @@ export default function Team(){
         <Container id="team">
             <SubContainer>
             <Title>CONHEÇA NOSSA EQUIPE QUE ESTÁ SEMPRE PRONTA PARA ENCONTRAR AS MELHORES OFERTAS PARA REALIZAR O SEU SONHO DE CONHECER O MUNDO!</Title>
-            <PhotosTop><Photo1><img src={imgPaulo}/><h1>PAULO</h1></Photo1> <Photo2><img src={imgIago}/> <h1>IAGO</h1></Photo2></PhotosTop> 
-            <PhotoBottom><Photo3><img src={imgYuri}/><h1>YURI</h1></Photo3></PhotoBottom>
+            <PhotosTop><Photo1><img src={imgPaulo} alt="paulo"/><h1>PAULO</h1></Photo1> <Photo2><img src={imgIago} alt="iago"/> <h1>IAGO</h1></Photo2></PhotosTop> 
+            <PhotoBottom><Photo3><img src={imgYuri} alt="yuri"/><h1>YURI</h1></Photo3></PhotoBottom>
             </SubContainer>
         </Container>
         </>
