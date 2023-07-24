@@ -27,6 +27,10 @@ flex-wrap: wrap;
 justify-content: space-around;
 width: 1200px;
 padding-bottom: 30px;
+@media (max-width: 1200px) {
+    
+    width: 100%;
+  }
 `
 const Title = styled.h1`
 margin-top: 30px;
@@ -34,4 +38,7 @@ font-weight: bold;
 font-family: 'Roboto', sans-serif;
 color: #013881;
 font-size: 30px;
+@media (max-width: 768px) {
+    text-align: center;
+  }
 `

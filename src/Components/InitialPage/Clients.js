@@ -45,8 +45,7 @@ export default function Clients() {
             <Container id="client">
                 <Title>NOSSOS CLIENTES INDICAM! <img src={logoInsta} alt="logoinsta" /></Title>
                 <Recommendations>
-                    <ClientText>{clientTexts[currentTextIndex]}</ClientText>
-                   
+            
                     <ArrowLeft src={arrowLeft} onClick={() => handleArrowClick('left')} />
                     <ArrowRight src={arrowRight} onClick={() => handleArrowClick('right')} />
                     <ClientContainer>
@@ -55,6 +54,7 @@ export default function Clients() {
                             <Story key={index} isActive={index === currentImageIndex} />
                         ))}
                     </Stories>
+                    <ClientText>{clientTexts[currentTextIndex]}</ClientText>
                         <ClientImage src={images[currentImageIndex]}
                             slideDirection={slideDirection}
                             onTransitionEnd={handleTransitionEnd} />
@@ -72,22 +72,40 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-evenly;
-
+@media (max-width: 1108px) {
+  height: 1000px;
+  }
 `
+
 const Title = styled.h1`
 margin-top: -350px;
 font-weight: bold;
 font-family: 'Roboto', sans-serif;
 color: #013881;
 font-size: 30px;
-
 img{
     width: 25px;
     margin-left: 15px;
 }
+@media (max-width: 1108px) {
+    margin-top: -520px;
+  }
+  @media (max-width: 519px) {
+    font-size: 20px;
+    margin-top: -540px;
+    img{
+      width: 15px;
+    }
+  }
 `
 const Recommendations = styled.div`
 position: relative;
+@media (max-width: 1108px) {
+    margin-top: -150px;
+  }
+  @media (max-width: 519px) {
+    margin-left: 50px;
+  }
 `
 const ArrowLeft = styled.img`
 position: absolute;
@@ -95,6 +113,14 @@ left: -550px;
 top:-150px;
 width: 30px;
 cursor: pointer;
+@media (max-width: 1108px) {
+  left: -310px;
+  }
+  @media (max-width: 658px) {
+    top:-390px;
+    width: 15px;
+    left: -150px;
+  }
 `
 const ArrowRight = styled.img`
 position: absolute;
@@ -102,6 +128,14 @@ right: -550px;
 top:-150px;
 width: 30px;
 cursor: pointer;
+@media (max-width: 1108px) {
+  right: -250px;
+  }
+  @media (max-width: 658px) {
+    top:-390px;
+    width: 15px;
+    right: -90px;
+  }
 `
 const ClientImage = styled.img`
   width: 300px;
@@ -111,6 +145,9 @@ const ClientImage = styled.img`
   transition: all 0.3s ease-out;
   transform: ${({ slideDirection }) =>
         slideDirection === "slide-left" ? "translateX(-5%)" : slideDirection === "slide-right" ? "translateX(5%)" : "none"};
+@media (max-width: 1108px) {
+  left: -180px;
+  }
 `
 const Stories = styled.div`
   display: flex;
@@ -121,6 +158,9 @@ const Stories = styled.div`
   top: -350px;
   width: 310px;
   left: -305px;
+  @media (max-width: 1108px) {
+  left:-185px;
+  }
 `
 const Story = styled.div`
   flex-grow: 1;
@@ -143,11 +183,22 @@ const ClientText = styled.div`
   left: 50px;
   top: -300px;
   border: 5px solid #013881;
+  @media (max-width: 1108px) {
+    top:320px;
+    border-radius: 20px;
+    width: 450px;
+    left:-270px;
+    font-size: 15px;
+  }
+  @media (max-width: 519px) {
+    font-size: 10px;
+    max-width: 200px;
+    left:-150px;
+  }
 `;
 
 const ClientContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-
 `

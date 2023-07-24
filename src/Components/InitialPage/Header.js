@@ -46,10 +46,16 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
+@media (max-width: 415px) {
+ justify-content: space-between;
+  }
 `
 
 const Logo = styled.img`
 width: 220px;
+@media (max-width: 768px) {
+ width: 100px;
+  }
 `
 
 const Options = styled.div`
@@ -62,6 +68,21 @@ color: #4F4F4F;
 h2{
     cursor: pointer;
 }
+@media (max-width: 768px) {
+  width: 100%;
+  h2{
+    font-size: 10px;
+  }
+  }
+  @media (max-width: 415px) {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    margin-bottom: 3px;
+  }
+  }
 `
 
 const WhatsApp = styled.div`
@@ -79,4 +100,12 @@ cursor: pointer;
 img{
     width: 17.5px;
 }
+@media (max-width: 768px) {
+  width: 80px;
+  height: 30px;
+  font-size: 8px;
+  img{
+    width: 13px;
+}
+  }
 `
