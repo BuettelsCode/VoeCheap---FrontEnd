@@ -47,6 +47,15 @@ font-family: 'Roboto', sans-serif;
 color: #013881;
 font-size: 30px;
 text-align: center;
+@media (max-width: 1108px) {
+        font-size: 25px;
+  }
+  @media (max-width: 861px) {
+        font-size: 20px;
+}
+@media (max-width: 509px) {
+        font-size: 15px;
+}
 `
 
 const PhotosTop = styled.div`
@@ -56,6 +65,21 @@ display: flex;
 justify-content: space-around;
 img{
 width: 300px;
+}
+@media (max-width: 1108px) {
+    img{
+        width: 250px;
+    }
+  }
+  @media (max-width: 861px) {
+    img{
+        width: 150px;
+    }
+}
+@media (max-width: 509px) {
+    img{
+        width: 100px;
+    }
 }
 `
 const Photo1 = styled.div`
@@ -87,9 +111,23 @@ const PhotoBottom = styled.div`
 width: 100%;
 display: flex;
 justify-content: center;
-
 img{
     width: 300px;
+}
+@media (max-width: 1108px) {
+    img{
+        width: 250px;
+    }
+}
+@media (max-width: 861px) {
+    img{
+        width: 150px;
+    }
+}
+@media (max-width: 509px) {
+    img{
+        width: 100px;
+    }
 }
 `
 const Photo3 = styled.div`

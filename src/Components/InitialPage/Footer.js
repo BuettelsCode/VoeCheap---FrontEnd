@@ -19,8 +19,6 @@ export default function Footer() {
                         <Linha></Linha>
                         <CopyRight> VoeCheap | CNPJ 47.580.288/0001-84 – Juiz de Fora – MG | Todos os direitos reservados <img src={cadastur} alt="cadastur"/></CopyRight>
                     </Infos>
-                    
-                
             </Container>
         </>
     )
@@ -48,12 +46,15 @@ position: absolute;
 z-index: 10;
 width: 95%;
 top: 20px;
-left: 30px;
+left: 0px;
 color: white;
 font-size: 20px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    @media (max-width: 520px) {
+            width: 100%; 
+}
 `
 const Infos = styled.div`
 position: relative;
@@ -62,9 +63,13 @@ z-index: 10;
 display: flex;
 align-items: center;
 justify-content: space-around;
+@media (max-width: 658px) {
+        h1{
+            font-size: 15px;
+        }   
+}
 `
 const Wpp = styled.div`
-
 z-index: 10;
 left: 30px;
 display: flex;
@@ -77,9 +82,24 @@ h1{
     font-size: 25px;
     color: white;
 }
+@media (max-width: 658px) {
+        h1{
+            font-size: 15px;
+        }   
+        img{
+            width:20px;
+        }
+}
+@media (max-width: 419px) {
+        h1{
+            font-size: 10px;
+        }   
+        img{
+            width:15px;
+        }
+}
 `
 const Instagram = styled.div`
-
 z-index: 10;
 left: 30px;
 display: flex;
@@ -93,9 +113,24 @@ h1{
     font-size: 25px;
     color: white;
 }
+@media (max-width: 658px) {
+        h1{
+            font-size: 15px;
+        }   
+        ion-icon[name="logo-instagram"] {
+            font-size:20px;
+}
+}
+@media (max-width: 419px) {
+        h1{
+            font-size: 10px;
+        }   
+        ion-icon[name="logo-instagram"] {
+            font-size:15px;
+}
+}
 `
 const Email = styled.div`
-
 z-index: 10;
 left: 30px;
 display: flex;
@@ -109,10 +144,26 @@ h1{
     font-size: 25px;
     color: white;
 }
+@media (max-width: 658px) {
+        h1{
+            font-size: 15px;
+        }   
+        ion-icon[name="mail-outline"] {
+            font-size:20px;
+}
+}
+@media (max-width: 419px) {
+        h1{
+            font-size: 10px;
+        }   
+        ion-icon[name="mail-outline"] {
+            font-size:15px;
+}
+}
 `
 const Linha = styled.div`
 position: absolute;
-background-color: white;
+background-color: black;
 margin-top: 10px;
 height: 2px;
 width: 100%;
@@ -123,8 +174,13 @@ const CopyRight = styled.h1`
 color: white;
 position: absolute;
 bottom: 30px;
+text-align:center;
 img{
     padding-left: 80px;
     width: 100px;
+}
+@media (max-width: 658px){
+   text-align:center;
+   bottom:10px;
 }
 `
