@@ -102,10 +102,17 @@ position: absolute;
 width: 15px;
 left: 30px;
 top: 25px;
+@media (max-width: 448px){
+    left: 10px;
+    top:-40px;
+ }
 `
 const Logo = styled.img`
 width: 300px;
 margin-bottom: 10px;
+@media (max-width: 448px){
+    width: 200px;
+ }
 `
 
 const Input = styled.input`
@@ -115,6 +122,9 @@ color: #8707ff;
  border-radius: 10px;
  padding: 10px 25px;
  background: transparent;
+ @media (max-width: 358px){
+    width: 50%;
+ }
 `
 const StyledForm = styled.div`
     background-color: white;
@@ -124,6 +134,12 @@ const StyledForm = styled.div`
   border-radius: 11px;
   font-weight: bold;
 font-family: 'Roboto', sans-serif;
+@media (max-width: 509px) {
+        width: 100%;
+  }
+  @media (max-width: 358px){
+  padding-left: 120px;
+ }
 `
 const Button = styled.button`
  margin-bottom:10px;
@@ -139,5 +155,9 @@ transition: background-color 0.3s ease;
 }
  h1{
     color: black;
+ }
+ @media (max-width: 358px){
+    width: 70%;
+    margin-left: -8px;
  }
 `
