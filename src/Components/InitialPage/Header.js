@@ -47,7 +47,7 @@ display: flex;
 align-items: center;
 justify-content: space-evenly;
 @media (max-width: 415px) {
- justify-content: space-between;
+ justify-content: space-around;
   }
 `
 
@@ -55,6 +55,9 @@ const Logo = styled.img`
 width: 220px;
 @media (max-width: 768px) {
  width: 100px;
+  }
+  @media (max-width: 415px) {
+    width: 150px;
   }
 `
 
@@ -75,13 +78,7 @@ h2{
   }
   }
   @media (max-width: 415px) {
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h2{
-    margin-bottom: 3px;
-  }
+  display: none;
   }
 `
 
@@ -107,5 +104,12 @@ img{
   img{
     width: 13px;
 }
+  }
+  @media (max-width: 415px) {
+  width: 100px;
+  font-size: 12px;
+  img{
+    width: 15px;
+  }
   }
 `

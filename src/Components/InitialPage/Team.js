@@ -25,6 +25,9 @@ justify-content: center;
 align-items: center;
 background: linear-gradient(180deg, #013881 0%, rgba(1, 56, 129, 0) 100%);
 margin-bottom: 120px;
+@media (max-width: 861px) {
+       height: 500px;
+}
 `
 const SubContainer = styled.div`
 margin-top:150px ;
@@ -37,7 +40,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin-bottom: 60px;
-
+/* @media (max-width: 1108px) {
+       height: 87%;
+  }
+  @media (max-width: 861px) {
+        height: 70%;
+  } */
 `
 
 const Title = styled.h1`

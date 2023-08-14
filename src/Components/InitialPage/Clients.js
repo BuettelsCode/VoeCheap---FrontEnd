@@ -191,9 +191,11 @@ const ClientText = styled.div`
     font-size: 15px;
   }
   @media (max-width: 519px) {
-    font-size: 10px;
-    max-width: 200px;
-    left:-150px;
+    font-size: 15px;
+    max-width: 250px;
+    max-height: 205px;
+    top: 305px;
+    left:-180px;
   }
 `;
 

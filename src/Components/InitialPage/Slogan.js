@@ -28,6 +28,19 @@ h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
+@media (max-width: 768px) {
+    height: 500px;
+ h1{
+    font-size: 30px;
+ }
+  }
+  @media (max-width: 415px) {
+    height: 300px;
+ h1{
+    font-size: 15px;
+ }
+}
+
 `
 const FrontAjust = styled.div`
 position: absolute;
