@@ -26,7 +26,7 @@ align-items: center;
 background: linear-gradient(180deg, #013881 0%, rgba(1, 56, 129, 0) 100%);
 margin-bottom: 120px;
 @media (max-width: 861px) {
-       height: 500px;
+       height: 400px;
 }
 `
 const SubContainer = styled.div`

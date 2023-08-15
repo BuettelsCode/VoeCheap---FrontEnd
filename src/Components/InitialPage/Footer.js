@@ -92,7 +92,7 @@ h1{
 }
 @media (max-width: 419px) {
         h1{
-            font-size: 10px;
+            font-size: 15px;
         }   
         img{
             width:15px;
@@ -123,7 +123,7 @@ h1{
 }
 @media (max-width: 419px) {
         h1{
-            font-size: 10px;
+            font-size: 15px;
         }   
         ion-icon[name="logo-instagram"] {
             font-size:15px;
@@ -154,7 +154,7 @@ h1{
 }
 @media (max-width: 419px) {
         h1{
-            font-size: 10px;
+            font-size: 15px;
         }   
         ion-icon[name="mail-outline"] {
             font-size:15px;
