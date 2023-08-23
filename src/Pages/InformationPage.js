@@ -18,7 +18,7 @@ export default function InformationPage() {
     function formatarData(data) {
         const [ano, mes, dia] = data.split('-');
         return `${dia}/${mes}/${ano}`;
-      }
+    }
 
     function submit(e) {
         e.preventDefault();
@@ -28,7 +28,7 @@ export default function InformationPage() {
         if (returnDate === "") {
             message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre uma passagem de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate}, sem data de retorno.`;
         } else {
-           const formattedReturnDate = formatarData(returnDate);
+            const formattedReturnDate = formatarData(returnDate);
             message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre uma passagem de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate} e com retorno programado para o dia ${formattedReturnDate}.`;
         }
         const encode = encodeURIComponent(message);
@@ -37,8 +37,8 @@ export default function InformationPage() {
 
     return (
         <FormContainer>
-            <Logo src={logo} alt="logo" />
             <StyledForm>
+                <Logo src={logo} alt="logo" />
                 <Informations onSubmit={submit}>
                     <label for="name">Nome:</label>  <Link style={{ textDecoration: "none" }} to={"/"}><Back src={arrowLeft} /></Link>
                     <Input type="text" id="name" name="name" value={name}
@@ -101,7 +101,7 @@ const Back = styled.img`
 position: absolute;
 width: 15px;
 left: 30px;
-top: 25px;
+top: 30px;
 @media (max-width: 448px){
     left: 10px;
     top:-40px;
@@ -109,7 +109,7 @@ top: 25px;
 `
 const Logo = styled.img`
 width: 300px;
-margin-bottom: 10px;
+margin-bottom: 25px;
 @media (max-width: 448px){
     width: 200px;
  }
@@ -128,9 +128,12 @@ color: #8707ff;
 `
 const StyledForm = styled.div`
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   width: 500px;
   position: relative;
-  padding-top: 5px;
+  padding-top: 15px;
   border-radius: 11px;
   font-weight: bold;
 font-family: 'Roboto', sans-serif;
@@ -142,7 +145,7 @@ font-family: 'Roboto', sans-serif;
  }
 `
 const Button = styled.button`
- margin-bottom:10px;
+ margin-bottom:40px;
 color: #8707ff;
  border: 2px solid #013881;
  border-radius: 10px;
