@@ -4,9 +4,10 @@ const UserContext = createContext();
 
 function UserProvider({ children }) {
     const [packSelect, setPackSelect] = useState("");
+    const [packId, setPackId] = useState(0);
     
     return (
-        <UserContext.Provider value={{ packSelect, setPackSelect }} >
+        <UserContext.Provider value={{ packSelect, setPackSelect, packId, setPackId }} >
             {children}
         </UserContext.Provider>
     );

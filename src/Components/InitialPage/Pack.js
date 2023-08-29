@@ -7,11 +7,12 @@ import UserContext from "../../contexts/ContextApi";
 
 export default function Pack({ p }) {
 
-    const { setPackSelect } = useContext(UserContext);
+    const { setPackSelect, setPackId } = useContext(UserContext);
     const navigate = useNavigate();
 
     function reservarPack() {
         setPackSelect(p.destiny);
+        setPackId(p.id);
         navigate("/information");
     }
 
