@@ -18,7 +18,7 @@ export default function Packages() {
        promisse.catch((err) => {
         console.log(err);
        })
-    }, [packs]);
+    }, []);
 
     console.log(packs);
     return (<>

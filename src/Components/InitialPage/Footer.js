@@ -64,6 +64,8 @@ display: flex;
 align-items: center;
 justify-content: space-around;
 @media (max-width: 658px) {
+    flex-direction: column;
+    justify-content: center;
         h1{
             font-size: 15px;
         }   
@@ -83,6 +85,7 @@ h1{
     color: white;
 }
 @media (max-width: 658px) {
+    margin-top: -30px;
         h1{
             font-size: 15px;
         }   
@@ -92,7 +95,7 @@ h1{
 }
 @media (max-width: 419px) {
         h1{
-            font-size: 15px;
+            font-size: 13px;
         }   
         img{
             width:15px;

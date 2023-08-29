@@ -5,6 +5,7 @@ import logo from "../Assets/logo.png";
 import { useContext } from "react";
 import UserContext from "../contexts/ContextApi";
 import { useState } from "react";
+import axios from "axios";
 
 export default function InformationPage() {
 
@@ -24,13 +25,29 @@ export default function InformationPage() {
         e.preventDefault();
         let message;
         const formattedDepartureDate = formatarData(departureDate);
-        console.log(formattedDepartureDate);
         if (returnDate === "") {
             message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre uma passagem de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate}, sem data de retorno.`;
         } else {
             const formattedReturnDate = formatarData(returnDate);
             message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre uma passagem de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate} e com retorno programado para o dia ${formattedReturnDate}.`;
         }
+
+        const URL = "https://voecheapdeploy-api.onrender.com/client/:packgeId";
+        const customerPack = {
+            name,
+            whatsApp,
+            originCity,
+            departureDate,
+            returnDate
+        };
+        const promisse = axios.post(URL, customerPack);
+        promisse.then((res) => {
+            console.log(res.data);
+        });
+        promisse.catch((err) => {
+            console.log(err.data);
+        });
+
         const encode = encodeURIComponent(message);
         window.open(`https://wa.me/553284186537?text=${encode}`);
     }
@@ -78,6 +95,9 @@ const FormContainer = styled.div`
   align-items: center;
   height: 100vh;
   background-color: rgba(1, 56, 129, 0.5);
+  @media (max-width: 508px){
+    background-color: white;
+ }
 `;
 
 const Informations = styled.form`
@@ -103,8 +123,8 @@ width: 15px;
 left: 30px;
 top: 30px;
 @media (max-width: 448px){
-    left: 10px;
-    top:-40px;
+    left: 25px;
+    top: 24px;
  }
 `
 const Logo = styled.img`
