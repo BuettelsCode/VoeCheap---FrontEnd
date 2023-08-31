@@ -9,13 +9,12 @@ import axios from "axios";
 
 export default function InformationPage() {
 
-    const { packSelect, packId } = useContext(UserContext);
+    const { packSelect, packgeId } = useContext(UserContext);
     const [name, setName] = useState("");
     const [whatsApp, setWhatsApp] = useState("");
     const [originCity, setOriginCity] = useState("");
     const [departureDate, setDepartureDate] = useState("");
     const [returnDate, setReturnDate] = useState("");
-    console.log(packId);
     function formatarData(data) {
         const [ano, mes, dia] = data.split('-');
         return `${dia}/${mes}/${ano}`;
@@ -32,13 +31,13 @@ export default function InformationPage() {
             message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre uma passagem de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate} e com retorno programado para o dia ${formattedReturnDate}.`;
         }
 
-        const URL = `https://voecheapdeploy-api.onrender.com/client/:${packId}`;
+        const URL = `https://voecheapdeploy-api.onrender.com/client`;
         const customerPack = {
-            name,
-            whatsApp,
-            originCity,
-            departureDate,
-            returnDate
+            packgeId: packgeId,
+            name:name,
+            whatsapp:whatsApp,
+            going:departureDate,
+            turning:returnDate
         };
         const promisse = axios.post(URL, customerPack);
         promisse.then((res) => {
