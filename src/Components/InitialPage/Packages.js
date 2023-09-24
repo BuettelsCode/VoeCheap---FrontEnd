@@ -6,27 +6,22 @@ import axios from "axios"
 
 export default function Packages() {
 
-    const [packs, setPacks] = useState([]);
+  const packs = [
+    { id: 1 , destiny: "Lisboa", image: "https://encurtador.com.br/mAGS5", price: "R$2.600,00/pessoa", support: "Suporte diário", departureTax: "Taxa de embarque inclusa", baggage: "2 bagagens (23kg/10kg) + 1 de mão", ticket: "Passagem de ida com volta cancelada" },
+    { id: 2 , destiny: "Orlando", image: "https://encurtador.com.br/asu14", price: "R$3.050,00/pessoa", support: "Suporte diário", departureTax: "Taxa de embarque inclusa", baggage: "2 bagagens (23kg/10kg) + 1 de mão", ticket: "Passagens de ida e volta" },
+    { id: 3 , destiny: "Paris", image: "https://encurtador.com.br/goEU1", price: "R$8.490,00/pessoa", support: "Suporte diário", departureTax: "Taxa de embarque inclusa", baggage: "3 bagagens (2x23kg/10kg) + 1 de mão", ticket: "Passagens de ida e volta" },
+    { id: 4 , destiny: "Madrid", image: "https://encurtador.com.br/gszBU", price: "R$4.500,00/pessoa", support: "Suporte diário", departureTax: "Taxa de embarque inclusa", baggage: "2 bagagens (23kg/10kg) + 1 de mão", ticket: "Passagens de ida e volta" },
+    { id: 5 , destiny: "Orlando - Executiva", image: "https://encurtador.com.br/oILU0", price: "R$8.490,00/pessoa", support: "Suporte diário", departureTax: "Taxa de embarque inclusa", baggage: "3 bagagens (2x23kg/10kg) + 1 de mão", ticket: "Passagens de ida e volta" },
+    { id: 6 , destiny: "Nova York", image: "https://encurtador.com.br/pIPY1", price: "R$8.490,00/pessoa", support: "Suporte diário", departureTax: "Taxa de embarque inclusa", baggage: "3 bagagens (2x23kg/10kg) + 1 de mão", ticket: "Passagens de ida e volta" }
+  ]
 
-    useEffect(() => {
-       const URL = "https://voecheapdeploy-api.onrender.com/packs";
-       const promisse = axios.get(URL);
 
-       promisse.then((res) => {
-        setPacks(res.data);
-       });
-       promisse.catch((err) => {
-        console.log(err);
-       })
-    }, []);
-
-    console.log(packs);
-    return (<>
-        <Title>PRINCIPAIS PASSAGENS</Title>
-        <Container id="packages">
-            {packs.map((p) => (<Pack p={p} />))}
-        </Container>
-    </>)
+  return (<>
+    <Title>PRINCIPAIS PASSAGENS</Title>
+    <Container id="packages">
+      {packs.map((p) => (<Pack p={p} />))}
+    </Container>
+  </>)
 }
 
 const Container = styled.div`

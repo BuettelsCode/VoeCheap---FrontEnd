@@ -9,7 +9,7 @@ import axios from "axios";
 
 export default function InformationPage() {
 
-    const { packSelect, packgeId } = useContext(UserContext);
+    const { packSelect } = useContext(UserContext);
     const [name, setName] = useState("");
     const [whatsApp, setWhatsApp] = useState("");
     const [originCity, setOriginCity] = useState("");
@@ -30,22 +30,6 @@ export default function InformationPage() {
             const formattedReturnDate = formatarData(returnDate);
             message = `Olá, meu nome é ${name}. Gostaria de obter informações sobre uma passagem de viagem para ${packSelect}, saindo de ${originCity} com data de ida em ${formattedDepartureDate} e com retorno programado para o dia ${formattedReturnDate}.`;
         }
-
-        const URL = `https://voecheapdeploy-api.onrender.com/client`;
-        const customerPack = {
-            packgeId: packgeId,
-            name:name,
-            whatsapp:whatsApp,
-            going:departureDate,
-            turning:returnDate
-        };
-        const promisse = axios.post(URL, customerPack);
-        promisse.then((res) => {
-            console.log(res.data);
-        });
-        promisse.catch((err) => {
-            console.log(err.data);
-        });
 
         const encode = encodeURIComponent(message);
         window.open(`https://wa.me/553284186537?text=${encode}`);
