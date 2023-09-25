@@ -13,7 +13,7 @@ export default function Footer() {
                 </Contact>
                 <Translucent></Translucent>
                     <Infos>
-                        <Wpp><img src={wpp} alt="wpp" /> <h1>{`(32) 98495-7373`}</h1></Wpp>
+                        <Wpp><img src={wpp} alt="wpp" /> <h1>{`55 32 98495‑7373`}</h1></Wpp>
                         <Instagram><ion-icon name="logo-instagram"></ion-icon> <h1>@voecheap</h1></Instagram>
                         <Email><ion-icon name="mail-outline"></ion-icon><h1>voecheap@gmail.com</h1></Email>
                         <Linha></Linha>

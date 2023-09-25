@@ -23,10 +23,10 @@ export default function Pack({ p }) {
             </Image>
             <Destiny><div>{p.destiny}</div></Destiny>
             <Container destiny={p.destiny}>
-                <div><img src={check} alt="check" /> {p.departureTax}</div>
-                <div><img src={check} alt="check" /> {p.support}</div>
-                <div><img src={check} alt="check" /> {p.baggage}</div>
                 {p.destiny === 'Lisboa' ? <DivLisboa><img src={asterisc} alt="asterisco" /> {p.ticket}</DivLisboa> : <div><img src={check} alt="check" /> {p.ticket}</div>}
+                <div><img src={check} alt="check" /> {p.departureTax}</div>
+                <div><img src={check} alt="check" /> {p.baggage}</div>
+                <div><img src={check} alt="check" /> {p.support}</div>
             </Container>
             <Button onClick={reservarPack}><div>FALE COM CONSULTOR</div></Button>
         </Packet>
@@ -67,7 +67,7 @@ display: flex;
 flex-direction: column;
 align-items: start;
 justify-content: center;
-padding-left: 30px;
+padding-left: 20px;
 div{
 margin-top: 10px;
 font-weight: bold;
