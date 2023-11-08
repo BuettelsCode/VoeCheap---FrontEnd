@@ -1,43 +1,38 @@
 import styled from "styled-components"
 import logo from "../../Assets/logo.png"
-import wpp from "../../Assets/wpp.png"
+import { Link } from "react-router-dom";
 
 export default function Header() {
-    const PacksClick = () => {
-        const packagesSection = document.getElementById("packages");
-        packagesSection.scrollIntoView({ behavior: "smooth" });
-    };
-    const ClientsClick = () => {
-        const packagesSection = document.getElementById("client");
-        packagesSection.scrollIntoView({ behavior: "smooth" });
-    };
-    const TeamClick = () => {
-        const packagesSection = document.getElementById("team");
-        packagesSection.scrollIntoView({ behavior: "smooth" });
-    };
-    const ContactClick = () => {
-        const packagesSection = document.getElementById("contact");
-        packagesSection.scrollIntoView({ behavior: "smooth" });
-    };
 
-    function Wpp(){
-        const message = "Olá, gostaria de obter mais informações sobre as passagens de viagem, por favor.";
-        const encode = encodeURIComponent(message);
-        window.open(`https://wa.me/5532984957373?text=${encode}`);
-    }
-    
-    return (<>
-        <Head>
-            <Logo src={logo} alt="logo" />
-            <Options>
-                <h2 onClick={PacksClick}>PASSAGENS</h2>
-                <h2 onClick={ClientsClick}>DEPOIMENTOS</h2>
-                <h2 onClick={TeamClick}>EQUIPE</h2>
-                <h2 onClick={ContactClick}>CONTATO</h2>
-            </Options>
-            <WhatsApp onClick={Wpp}>WHATSAPP<img src={wpp} alt="wpp" /></WhatsApp>
-        </Head>
-    </>)
+  const openAllPacksInNewPage = () => {
+    window.open('/allpacks', '_blank');
+  };
+
+  const openTeamPage = () => {
+    window.open('teampage', '_blank');
+  };
+
+  const openCommonPage = () => {
+    window.open('/commonpage', '_blank');
+  };
+  
+  const openContactPage = () => {
+    window.open('/contactpage', '_blank');
+  };
+
+  return (<>
+    <Head>
+      <Logo src={logo} alt="logo" />
+      <Options>
+        <Link style={{color:"#013881" , textDecoration: "none" }} to={"/"}><h2>HOME</h2></Link>
+        <h2 onClick={openAllPacksInNewPage}>PASSAGENS</h2>
+        <h2 onClick={openTeamPage}>SOBRE NÓS</h2>
+        <h2>NOTÍCIAS</h2>
+        <h2 onClick={openCommonPage}>PERGUNTAS FREQUENTES</h2>
+        <h2 onClick={openContactPage}>CONTATO</h2>
+      </Options>
+    </Head>
+  </>)
 }
 
 const Head = styled.div`
@@ -45,7 +40,7 @@ height: 100px;
 width: 100%;
 display: flex;
 align-items: center;
-justify-content: space-evenly;
+justify-content: space-around;
 @media (max-width: 415px) {
  justify-content: space-around;
   }
@@ -63,13 +58,14 @@ width: 220px;
 
 const Options = styled.div`
 display:flex;
-width: 600px;
-justify-content: space-evenly;
+width: 800px;
+justify-content: space-between;
 font-family: 'Roboto', sans-serif;
 font-weight: bold;
-color: #4F4F4F;
+color:#013881;
 h2{
     cursor: pointer;
+    margin-right: 10px;
 }
 @media (max-width: 768px) {
   width: 100%;

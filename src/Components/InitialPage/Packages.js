@@ -14,9 +14,9 @@ export default function Packages() {
 
 
   return (<>
-    <Title>PRINCIPAIS PASSAGENS</Title>
+    <Title>PASSAGENS RELEVANTES</Title>
     <Container id="packages">
-      {packs.map((p) => (<Pack p={p} />))}
+      {packs.map((p, index) => (<Pack p={p} key={index}/>))}
     </Container>
   </>)
 }
