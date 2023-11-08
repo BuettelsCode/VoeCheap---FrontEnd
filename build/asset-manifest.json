@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.js": "/static/js/main.5d8e6a17.js",
+    "main.js": "/static/js/main.d4d23202.js",
+    "static/media/Passaporte.jpg": "/static/media/Passaporte.c38f1aa0c1e9352980b3.jpg",
     "static/media/photo_Yuri.png": "/static/media/photo_Yuri.70b9fea6382546d1ecfc.png",
     "static/media/photo_Iago.png": "/static/media/photo_Iago.62cc20fb6db9f0ff35ee.png",
     "static/media/photo_Paulo.png": "/static/media/photo_Paulo.5e587968e1b5d609471e.png",
     "static/media/CAPA.jpg": "/static/media/CAPA.aa01fa8583456095be1b.jpg",
+    "static/media/foto3.png": "/static/media/foto3.a6d1d2fa669279472d54.png",
     "static/media/photoFooter.png": "/static/media/photoFooter.85c9d4be80da215ca105.png",
-    "static/media/cadastur-logo.png": "/static/media/cadastur-logo.be6f84e44490bade7820.png",
-    "static/media/dep3.jpeg": "/static/media/dep3.074579688589e4423811.jpeg",
-    "static/media/dep2.jpeg": "/static/media/dep2.9200cab5d41dd6ffe274.jpeg",
-    "static/media/dep1.jpeg": "/static/media/dep1.6a77577cbd5468454ac0.jpeg",
+    "static/media/foto1.png": "/static/media/foto1.c8dd781f8e9825b70193.png",
+    "static/media/foto2.png": "/static/media/foto2.fe0fdc92ed8b366f541e.png",
+    "static/media/newDep1.jpeg": "/static/media/newDep1.109f8c942acc8d9c0b56.jpeg",
+    "static/media/newDep3.jpeg": "/static/media/newDep3.8c57c6fc43c54ed5656c.jpeg",
+    "static/media/newDep2.jpeg": "/static/media/newDep2.d585586747d7099c4f08.jpeg",
     "static/media/logo.png": "/static/media/logo.5dc74295bb795f715cab.png",
-    "static/media/logo-insta.png": "/static/media/logo-insta.5b6ab9a6e480da27d2fa.png",
+    "static/media/logoBranca.png": "/static/media/logoBranca.0d283ea75bb3ed769989.png",
+    "static/media/wpp2.0.png": "/static/media/wpp2.0.2b9c451eb69cb745b0b1.png",
     "index.html": "/index.html",
-    "main.5d8e6a17.js.map": "/static/js/main.5d8e6a17.js.map"
+    "main.d4d23202.js.map": "/static/js/main.d4d23202.js.map"
   },
   "entrypoints": [
-    "static/js/main.5d8e6a17.js"
+    "static/js/main.d4d23202.js"
   ]
 }
