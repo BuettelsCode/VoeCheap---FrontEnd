@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   const openTeamPage = () => {
-    window.open('teampage', '_blank');
+    window.open('/teampage', '_blank');
   };
 
   const openCommonPage = () => {
@@ -20,6 +20,10 @@ export default function Header() {
     window.open('/contactpage', '_blank');
   };
 
+  const openBlogPage = () => {
+    window.open('/blogpage', '_blank');
+  };
+
   return (<>
     <Head>
       <Logo src={logo} alt="logo" />
@@ -27,7 +31,7 @@ export default function Header() {
         <Link style={{color:"#013881" , textDecoration: "none" }} to={"/"}><h2>HOME</h2></Link>
         <h2 onClick={openAllPacksInNewPage}>PASSAGENS</h2>
         <h2 onClick={openTeamPage}>SOBRE NÓS</h2>
-        <h2>NOTÍCIAS</h2>
+        <h2 onClick={openBlogPage}>NOTÍCIAS</h2>
         <h2 onClick={openCommonPage}>PERGUNTAS FREQUENTES</h2>
         <h2 onClick={openContactPage}>CONTATO</h2>
       </Options>

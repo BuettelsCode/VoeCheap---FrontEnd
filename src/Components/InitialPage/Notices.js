@@ -34,6 +34,7 @@ display:flex;
 align-items: center;
 justify-content: space-evenly;
 margin-top: 20px;
+flex-wrap: wrap;
 `
 const News = styled.div`
     width: 270px;
@@ -42,6 +43,9 @@ const News = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media (max-width: 415px) {
+ justify-content: space-around;
+  }
   div{
     background-color:#013881;
     margin-top: 20px;

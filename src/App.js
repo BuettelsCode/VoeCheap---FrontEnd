@@ -8,6 +8,9 @@ import { UserProvider } from "./contexts/ContextApi.js";
 import TeamPage from "./Pages/TeamPage.js";
 import CommonPage from "./Pages/CommonPage.js";
 import ContactPage from "./Pages/ContactPage.js";
+import BlogPage from "./Pages/BlogPage.js";
+import BlogEdit from "./Pages/BlogEdit.js";
+import Login from "./Pages/Login.js";
 
 export default function App() {
   return (
@@ -17,15 +20,17 @@ export default function App() {
           <GlobalStyle />
           <Routes>
             <Route path="/" element={<InitialPage />} />
-            <Route path="/allpacks" element={<AllPacks/>}/>
-            <Route path="/teampage" element={<TeamPage/>}/>
-            <Route path="/commonpage" element={<CommonPage/>}/>
-            <Route path="/contactpage" element={<ContactPage/>}/>
+            <Route path="/allpacks" element={<AllPacks />} />
+            <Route path="/teampage" element={<TeamPage />} />
+            <Route path="/commonpage" element={<CommonPage />} />
+            <Route path="/contactpage" element={<ContactPage />} />
             <Route path="/information" element={<InformationPage />} />
+            <Route path="/blogpage" element={<BlogPage />} />
+            <Route path="/blogedit" element={<BlogEdit />} />
+            <Route path="/admin" element={<Login />} />
           </Routes>
         </BrowserRouter>
       </UserProvider>
     </>
   );
 }
-
