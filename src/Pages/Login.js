@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components"
@@ -11,7 +12,21 @@ export default function Login() {
 
     function submit(e) {
         e.preventDefault();
-        navigate("/blogedit");
+
+        const URL = "https://api-voecheap.onrender.com/sign-in";
+
+        const user = {
+            email,
+            password
+        };
+
+        const promisse = axios.post(URL, user);
+        promisse.then((res) => {
+            console.log(res);
+            navigate("/blogedit");
+        });
+        promisse.catch((err) => console.log(err.response.data));
+
     }
 
     return (

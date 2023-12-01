@@ -1,11 +1,10 @@
 import styled from "styled-components"
 
-export default function CommonSlogan(){
-    return(
+export default function CommonSlogan() {
+    return (
         <Container>
-         <Title>PERGUNTAS FREQUENTES.</Title>
-    </Container>
-   
+            <Title>PERGUNTAS FREQUENTES.</Title>
+        </Container>
     )
 }
 

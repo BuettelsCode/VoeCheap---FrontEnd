@@ -1,50 +1,35 @@
 import styled from "styled-components";
 import Header from "../Components/InitialPage/Header";
 import BlogSlogan from "../Components/InitialPage/Blog/BlogSlogan";
-import pass from "../Assets/Passaporte.jpg";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+import Posts from "../Components/InitialPage/Blog/Posts";
 
 export default function BlogPage() {
+
+    const [lastPosts, setLastPosts] = useState([]);
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                const response = await axios.get("https://api-voecheap.onrender.com/posts");
+                const sortedPosts = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                setLastPosts(sortedPosts);
+            } catch (err) {
+                console.log(err.response.data);
+            }
+        };
+
+        fetchPosts();
+    }, []);
+
     return (
         <Container>
             <Header />
             <BlogSlogan />
             <Notices>
-                <Contender>
-                    <Img src={pass} alt="pass" />
-                    <Column>
-                        <Text>
-                            Seu texto aqui. Este é um exemplo de texto longo 
-                        </Text>
-                        <Info>Ler Mais</Info>
-                    </Column>
-                </Contender>
-                <Contender>
-                    <Img src={pass} alt="pass" />
-                    <Column>
-                        <Text>
-                            Seu texto aqui. Este é um exemplo de texto longo 
-                        </Text>
-                        <Info>Ler Mais</Info>
-                    </Column>
-                </Contender>
-                <Contender>
-                    <Img src={pass} alt="pass" />
-                    <Column>
-                        <Text>
-                            Seu texto aqui. Este é um exemplo de texto longo 
-                        </Text>
-                        <Info>Ler Mais</Info>
-                    </Column>
-                </Contender>
-                <Contender>
-                    <Img src={pass} alt="pass" />
-                    <Column>
-                        <Text>
-                            Seu texto aqui. Este é um exemplo de texto longo 
-                        </Text>
-                        <Info>Ler Mais</Info>
-                    </Column>
-                </Contender>
+                {lastPosts.map((p, index) => (<Posts p={p} key={index} />))}
             </Notices>
         </Container>
     )
@@ -63,37 +48,4 @@ display: flex;
 flex-wrap: wrap;
 align-items: center;
 justify-content: space-around;
-`
-const Contender = styled.div`
- display: flex;
-  align-items: center;
-  width: 600px; /* Ajuste conforme necessário */
-  height: 400px;
-  padding: 10px;
-  margin-top: 50px;
-`;
-
-const Img = styled.img`
- width: 300px;
-        height: 100%;
-        object-fit: cover; 
-  margin-right: 10px;
-`
-const Text = styled.p`
-margin-top: 180px;
-font-size: 30px;
-  word-wrap: break-word;
-`;
-
-const Info = styled.div`
-font-size: 25px;
-margin-top: 20px;
-width: 100px;
-padding: 5px;
-text-align: center;
-background-color: blue;
-`
-const Column = styled.div`
-display: flex;
-flex-direction: column;
 `

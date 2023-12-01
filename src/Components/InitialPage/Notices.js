@@ -1,16 +1,35 @@
 import styled from "styled-components"
-import Passaporte from "../../Assets/Passaporte.jpg"
+import { useEffect, useState } from "react";
+import axios from "axios";
+import LastNews from "./Blog/LastNews";
 
 export default function Notices(){
+
+    const [lastPosts, setLastPosts] = useState([]);
+
+    useEffect(() => {
+        const URL = "http://localhost:5000/posts";
+
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(URL);
+                setLastPosts(response.data);
+            } catch (err) {
+                console.log(err.response.data);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    const lastFourPosts = lastPosts.slice(-4);
+
     return(
         <>
         <Container id="team">
            <Title>Últimas Notícias |<span>#voenotícias</span></Title>
            <LastNotices>
-            <News><img src={Passaporte} alt="passaporte"/><div>LER MAIS</div></News>
-            <News><img src={Passaporte} alt="passaporte"/><div>LER MAIS</div></News>
-            <News><img src={Passaporte} alt="passaporte"/><div>LER MAIS</div></News>
-            <News><img src={Passaporte} alt="passaporte"/><div>LER MAIS</div></News>
+            {lastFourPosts.map((p, index) => <LastNews p={p} key={index}/>)}
            </LastNotices>
            <Separation></Separation>
         </Container>
@@ -35,28 +54,6 @@ align-items: center;
 justify-content: space-evenly;
 margin-top: 20px;
 flex-wrap: wrap;
-`
-const News = styled.div`
-    width: 270px;
-    height: 380px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    @media (max-width: 415px) {
- justify-content: space-around;
-  }
-  div{
-    background-color:#013881;
-    margin-top: 20px;
-    padding: 5px;
-    color: white;
-  }
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-    }
 `
 
 const Title = styled.h1`
