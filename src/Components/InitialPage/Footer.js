@@ -38,17 +38,32 @@ width: 100%;
 height: 300px;
 background-color:#013881;
 display: flex;
+@media (max-width: 810px) {
+    height: auto; /* Adjusted height for smaller screens */
+    flex-direction: column; /* Updated to column for mobile layout */
+  align-items: center; /* Center content in the column */
+  }
 `
 const Logo = styled.img`
 width: 200px;
 height: 45px;
 margin-top: 45px;
 margin-left: 50px;
+@media (max-width: 810px) {
+    margin-top: 15px; /* Further adjusted margin for smaller screens */
+    margin-bottom: -15px;
+  }
 `
 const Contact = styled.div`
 display: flex;
 width: 100%;
 justify-content: space-between;
+@media (max-width: 810px) {
+    margin-top: 15px; /* Further adjusted margin for smaller screens */
+    flex-direction: column; /* Updated to column for mobile layout */
+  align-items: center; /* Center content in the column */
+  }
+
 `
 const ContactContainer = styled.div`
 color: white;
@@ -57,6 +72,13 @@ margin-left: 50px;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
+@media (max-width: 810px) {
+    margin-top: 15px; /* Further adjusted margin for smaller screens */
+    text-align: center; /* Center text in the column */
+    div{
+        margin-top: 10px;
+    }
+  }
 `
 const ClientEmail = styled.div`
 color: white;
@@ -65,6 +87,11 @@ flex-direction: column;
 direction: rtl;
 justify-content: space-around;
 margin-right: 100px;
+@media (max-width: 810px) {
+    margin-top: 15px; /* Further adjusted margin for smaller screens */
+    text-align: center; /* Center text in the column */
+    margin-right: -35px;
+  }
 `
 const Button = styled.div`
 background-color: white;
@@ -74,6 +101,12 @@ padding-right: 5px;
 padding-left: 5px;
 font-size: 20px;
 font-weight: bold;
+@media (max-width: 810px) {
+   margin-right: 110px;
+   font-size: 15px;
+   width: 100px;
+   margin-bottom: 10px;
+  }
 `
 
 const Verif = styled.div`

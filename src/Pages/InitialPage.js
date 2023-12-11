@@ -11,13 +11,13 @@ export default function InitialPage() {
     
     return (<>
         <Container>
-        <WhatsApp><img src={wpp} alt="wpp" /></WhatsApp>
+        {/* <WhatsApp><img src={wpp} alt="wpp" /></WhatsApp> */}
             <Header/>
             <Slogan />
             <Packages />
-            <Notices/>
+            {/* <Notices/> */}
             <Clients/>
-            <Footer/>
+            {/* <Footer/> */}
         </Container>
     </>)
 }

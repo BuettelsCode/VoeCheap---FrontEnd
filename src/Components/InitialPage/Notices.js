@@ -8,14 +8,14 @@ export default function Notices(){
     const [lastPosts, setLastPosts] = useState([]);
 
     useEffect(() => {
-        const URL = "http://localhost:5000/posts";
+        const URL = "https://api-voecheap.onrender.com/posts";
 
         const fetchData = async () => {
             try {
                 const response = await axios.get(URL);
                 setLastPosts(response.data);
             } catch (err) {
-                console.log(err.response.data);
+                console.log(err);
             }
         };
 
@@ -23,6 +23,7 @@ export default function Notices(){
     }, []);
 
     const lastFourPosts = lastPosts.slice(-4);
+    console.log(lastPosts)
 
     return(
         <>
@@ -65,4 +66,7 @@ color: #013881;
 span{
     margin-left: 10px;
 }
+@media (max-width: 710px) {
+  font-size: 30px;
+  }
 `
