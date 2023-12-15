@@ -17,14 +17,35 @@ const News = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media (max-width: 415px) {
- justify-content: space-around;
+    @media (max-width: 1075px) {
+        width: 200px;
+    height: 300px;
+  }
+  @media (max-width: 828px) {
+        width: 160px;
+    height: 280px;
+  }
+  @media (max-width: 659px) {
+        width: 120px;
+    height: 230px;
+  }
+    @media (max-width: 550px) {
+width: 100px;
+height: 200px;
+@media (max-width: 419px) {
+width: 80px;
+height: 160px;
+  }
   }
   div{
     background-color:#013881;
     margin-top: 20px;
     padding: 5px;
     color: white;
+    @media (max-width: 550px) {
+font-size: 10px;
+margin-bottom: -100px;
+  }
   }
     img{
         width: 100%;

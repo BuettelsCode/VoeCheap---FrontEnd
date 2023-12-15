@@ -136,6 +136,18 @@ const Options = styled.div`
       font-size: 10px;
     }
   }
+  @media (max-width: 390px) {
+    display: flex;
+    h2 {
+      font-size: 8px;
+    }
+  }
+  @media (max-width: 780px) {
+    display: flex;
+    h2 {
+      font-size: 12px;
+    }
+  }
   &.menu-open {
     h2 {
       font-size: 18px; // Ajuste conforme necessário

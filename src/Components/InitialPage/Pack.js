@@ -1,19 +1,21 @@
 import styled from "styled-components"
 import check from "../../Assets/check.png"
 import asterisc from "../../Assets/asterics 1.png"
-import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import UserContext from "../../contexts/ContextApi";
 
 export default function Pack({ p }) {
 
     const { setPackSelect, setPackId } = useContext(UserContext);
-    const navigate = useNavigate();
 
     function reservarPack() {
         setPackSelect(p.destiny);
         setPackId(p.id);
-        navigate("/information");
+        let message;
+        message = `Olá, gostaria de obter mais informações sobre essa passgem para ${p.destiny}`
+
+        const encode = encodeURIComponent(message);
+        window.open(`https://wa.me/5532984957373?text=${encode}`);
     }
 
     return (<>

@@ -77,6 +77,14 @@ font-size: 30px;
     margin-left: 200px;
     margin-bottom: 15px;
     color:#013881;
+    @media (max-width: 758px) {
+        font-size: 20px;
+        margin-left: 100px;
+  }
+  @media (max-width: 402px) {
+        font-size: 20px;
+        margin-left: 50px;
+  }
 `
 const SubTitle = styled.h2`
 font-size: 30px;
@@ -89,6 +97,14 @@ font-size: 30px;
       margin-top: 5px; /* Adiciona 10 pixels de margem na parte superior do texto */
       display: block; /* Torna o elemento inline em bloco para aplicar a margem */
     }
+    @media (max-width: 758px) {
+        font-size: 20px;
+        margin-left: 100px;
+  }
+  @media (max-width: 402px) {
+        font-size: 20px;
+        margin-left: 50px;
+  }
 `
 const StyleForm = styled.div`
 width: 80%;

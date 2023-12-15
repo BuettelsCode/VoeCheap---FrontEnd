@@ -42,12 +42,31 @@ const Container = styled.div`
 height: 525px;
 width: 100%;
 background-color: #D5D0CA;
+  @media (max-width: 1079px) {
+height: 440px;
+  }
+  @media (max-width: 659px) {
+height: 390px;
+  }
 `
 const Separation = styled.div`
 width: 100%;
 height: 50px;
 background-color: black;
 margin-top: 20px;
+@media (max-width: 828px) {
+height: 10px;
+margin-top: 40px;
+  }
+  @media (max-width: 710px) {
+margin-top: 60px;
+  }
+  @media (max-width: 550px) {
+    margin-top: 105px;
+  }
+  @media (max-width: 426px) {
+    margin-top: 145px;
+  }
 `
 const LastNotices = styled.div`
 display:flex;
@@ -68,5 +87,8 @@ span{
 }
 @media (max-width: 710px) {
   font-size: 30px;
+  }
+  @media (max-width: 550px) {
+font-size: 15px;
   }
 `

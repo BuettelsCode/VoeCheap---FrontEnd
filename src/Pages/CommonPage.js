@@ -29,8 +29,8 @@ export default function CommonPage() {
                         <h3>- Para pagamentos no cartão de crédito, trabalhamos com uma forma de parcelamento ideal para nossos clientes:</h3>
                         <p>PARCELADO: de 2x até 12x com juros, no cartão de crédito, através da plataforma cobre fácil.</p>
                     </div>
-                </Asks>
                 <img src={parcelamento} alt="parcelamento"/>
+                </Asks>
             </Container>
         </>
     )
@@ -42,7 +42,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 img{
-    margin-left: -1000px;
     margin-bottom: 20px;
 }
 `

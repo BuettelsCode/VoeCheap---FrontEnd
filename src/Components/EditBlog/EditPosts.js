@@ -11,7 +11,7 @@ export function EditPosts({ p, onUpdate}) {
     const [editedLink, setEditedLink] = useState(p.link);
 
     const handleDeleteClick = async () => {
-        const deleteURL = `http://localhost:5000/delete/${p.id}`;
+        const deleteURL = `https://api-voecheap.onrender.com/delete/${p.id}`;
 
         try {
             await axios.delete(deleteURL);
@@ -27,7 +27,7 @@ export function EditPosts({ p, onUpdate}) {
     };
 
     const handleSaveClick = async () => {
-        const editURL = `http://localhost:5000/put/${p.id}`;
+        const editURL = `https://api-voecheap.onrender.com/put/${p.id}`;
 
         try {
             await axios.patch(editURL, { text: editedText, image: editedImage, link: editedLink });

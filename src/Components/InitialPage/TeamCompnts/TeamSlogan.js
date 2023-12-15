@@ -57,22 +57,40 @@ h1{
       margin-top: 5px; /* Adiciona 10 pixels de margem na parte superior do texto */
       display: block; /* Torna o elemento inline em bloco para aplicar a margem */
     }
+    @media (max-width: 1195px) {
+        margin-left: 100px;
 }
-@media (max-width: 768px) {
-    height: 500px;
- h1{
-    font-size: 30px;
- }
-  }
-  @media (max-width: 415px) {
-    height: 300px;
+@media (max-width: 923px) {
+        margin-left: 100px;
+        font-size: 25px;
+}
+@media (max-width: 530px) {
+        margin-left: 50px;
+        h1{
+        font-size: 15px;      
+    }
+}
+}
+@media (max-width: 763px) {
+       height: 150px;
+       h1{
+        font-size: 15px;      
+    }
+}
+@media (max-width: 415px) {
  h1{
     font-size: 15px;
  }
 }
+@media (max-width: 530px) {
+       h1{
+       font-size: 13px;      
+   }
+}
 `
 const Title = styled.h1`
 color:#013881;
+
 `
 const SubTitle = styled.h1`
 color: white;
@@ -92,6 +110,12 @@ h2{
 }
 img{
     width: 250px;
+    @media (max-width: 1010px) {
+       width: 200px;
+  }
+  @media (max-width: 758px) {
+    width: 100px;
+}
 }
 `
 const AboutUs = styled.div`
@@ -100,6 +124,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+width: 80%;
 div {
     width: 100%;
     font-family: 'Roboto', sans-serif;
@@ -110,18 +135,25 @@ div {
     text-align: center;
     margin-top: 20px;
     line-height: 1.5;
+    @media (max-width: 500px) {
+    font-size: 10px;
+}
   }
 h1{
     font-family: 'Roboto', sans-serif;
     color:#013881;
     font-weight: bold;
     font-size: 30px;
+    @media (max-width: 500px) {
+    font-size: 20px;
+}
 }
 h2{
     font-family: 'Roboto', sans-serif;
     color:#013881;
     font-weight: bold;
     font-size: 15px;
+
 }
 `
 const LastPhrase = styled.h1`
@@ -131,12 +163,53 @@ const LastPhrase = styled.h1`
     font-size: 30px;
     margin-top: 30px;
     margin-bottom: 50px;
+    @media (max-width: 1200px) {
+ font-size: 25px;
+ text-align: center;
+ width: 550px;
+}
+@media (max-width: 1010px) {
+  font-size: 20px;
+}
+@media (max-width: 510px) {
+    width: 300px;
+    font-size: 10px;
+}
+@media (max-width: 550px) {
+    width: 400px;
+}
+@media (max-width: 389px) {
+    width: 300px;
+}
+@media (max-width: 750px) {
+    font-size: 15px;
+}
 `
 const Certificados = styled.div`
 display: flex;
 margin-bottom:20px;
 justify-content: space-between;
+img{
+    @media (max-width: 1401px) {
+       height: 300px;
+  }
+}
+@media (max-width: 1010px) {
+  display: flex;
+    flex-direction: column;
+}
+@media (max-width: 530px) {
+ img{
+    height: 200px;
+ }
+}
 `
 const Certificado1 = styled.img`
 height: 350px;
+@media (max-width: 1401px) {
+       height: 300px;
+  }
+  @media (max-width: 389px) {
+    width: 380px;
+}
 `
