@@ -1,13 +1,11 @@
 import styled from "styled-components";
 import Header from "../Components/InitialPage/Header";
-import wpp from "../Assets/wpp.png";
 import AllPacksSlogan from "../Components/InitialPage/Allpacks/AllPacksSlogan";
 import AllPackages from "../Components/InitialPage/Allpacks/AllPacksPackges";
 
 export default function AllPacks(){
     return (<>
         <Container>
-        {/* <WhatsApp><img src={wpp} alt="wpp" /></WhatsApp> */}
             <Header/>
             <AllPacksSlogan/>
             <AllPackages/>

@@ -12,9 +12,6 @@ export default function Header() {
     setMenuOpen(!isMenuOpen);
   };
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
 
   const openAllPacksInNewPage = () => {
     window.open('/allpacks', '_blank');
@@ -164,45 +161,3 @@ const MenuButton = styled.button`
     display: block;
   }
 `;
-const MenuContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
-  width: 250px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  transition: left 0.3s ease-in-out;
-`;
-
-const WhatsApp = styled.div`
-height: 40px;
-width: 150px;
-border-radius: 11px;
-background-color: #013881;
-color: white;
-font-weight: bold;
-font-family: 'Roboto', sans-serif;
-display: flex;
-align-items: center;
-justify-content: space-around;
-cursor: pointer;
-img{
-    width: 17.5px;
-}
-@media (max-width: 768px) {
-  width: 80px;
-  height: 30px;
-  font-size: 8px;
-  img{
-    width: 13px;
-}
-  }
-  @media (max-width: 415px) {
-  width: 100px;
-  font-size: 12px;
-  img{
-    width: 15px;
-  }
-  }
-`

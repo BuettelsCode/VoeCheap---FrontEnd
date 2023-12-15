@@ -50,7 +50,6 @@ const clientTexts = [
   return (
     <>
       <Container id="client">
-        {/* <Title>NOSSOS CLIENTES INDICAM! <img src={logoInsta} alt="logoinsta" /></Title> */}
         <Recommendations>
           <ArrowLeft src={arrowLeft} onClick={() => handleArrowClick('left')} />
           <ArrowRight src={arrowRight} onClick={() => handleArrowClick('right')} />
@@ -202,27 +201,7 @@ justify-content: space-evenly;
   height: 1000px;
   }
 `
-const Title = styled.h1`
-margin-top: -350px;
-font-weight: bold;
-font-family: 'Roboto', sans-serif;
-color: #013881;
-font-size: 30px;
-img{
-    width: 25px;
-    margin-left: 15px;
-}
-@media (max-width: 1108px) {
-    margin-top: -520px;
-  }
-  @media (max-width: 519px) {
-    font-size: 20px;
-    margin-top: -540px;
-    img{
-      width: 15px;
-    }
-  }
-`
+
 const Recommendations = styled.div`
 display: flex;
 align-items: center;
@@ -284,26 +263,7 @@ const ClientImage = styled.img`
     width: 20px;
   } */
 `
-const Stories = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; 
-  height: 10px;
-  position: absolute;
-  top: -350px;
-  width: 310px;
-  left: -305px;
-  @media (max-width: 1108px) {
-  left:-185px;
-  }
-`
-const Story = styled.div`
-  flex-grow: 1;
-  height: 3px;
-  background-color: ${({ isActive }) => (isActive ? "#013881" : "#CCC")};
-  border-radius: 15%;
-  margin: 0 5px;
-`
+
 const ClientFeedBack = styled.div`
   position: absolute;
   background-color: white;
@@ -380,9 +340,5 @@ background-color: rgba(0, 0, 0, 0.0); /* Valor de transparência: 0.5 */
   height: 150px;
   }
 `
-const ClientContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`
+
 
