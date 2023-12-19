@@ -65,19 +65,19 @@ const Head = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 220px;
-  @media (max-width: 768px) {
-    width: 100px;
-  }
-  @media (max-width: 477px) {
-    width: 150px;
-  }
-  @media (max-width: 860px) {
-    width: 200px;
-  }
-  @media (max-width: 760px) {
-    width: 150px;
-  }
+width: 220px;
+@media (max-width: 768px) {
+  width: 100px;
+}
+@media (max-width: 477px) {
+  width: 150px;
+}
+@media (max-width: 860px) {
+  width: 200px;
+}
+@media (max-width: 760px) {
+  width: 150px;
+}
 `;
 
 const OptionsContainer = styled.div`
@@ -90,12 +90,13 @@ const OptionsContainer = styled.div`
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  @media (min-width: 550px) {
+  @media (min-width: 560px) {
     display: flex;
     position: static;
     flex-direction: row;
     width: auto;
     box-shadow: none;
+    justify-content: space-around;
   }
 `;
 
@@ -112,20 +113,18 @@ const Options = styled.div`
       background-color: #f0f0f0;
     }
   }
-  @media (max-width: 768px) {
-    width: 100%;
+  @media (max-width: 860px) {
     h2 {
-      font-size: 10px;
+      font-size: 13px;
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: 695px) {
+    h2 {
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 560px) {
     display: none;
-  }
-  @media (max-width: 840px) {
-    display: flex;
-    h2 {
-      font-size: 15px;
-    }
   }
   @media (max-width: 760px) {
     display: flex;
@@ -133,22 +132,16 @@ const Options = styled.div`
       font-size: 10px;
     }
   }
-  @media (max-width: 390px) {
+  @media (max-width: 408px) {
     display: flex;
     h2 {
       font-size: 8px;
     }
   }
-  @media (max-width: 780px) {
-    display: flex;
-    h2 {
-      font-size: 12px;
-    }
-  }
   &.menu-open {
     h2 {
-      font-size: 18px; // Ajuste conforme necessário
-    }
+      font-size: 10px;
+  }
   }
 `;
 
@@ -157,7 +150,7 @@ const MenuButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  @media (max-width: 550px) {
+  @media (max-width: 560px) {
     display: block;
   }
 `;
