@@ -2,40 +2,48 @@ import styled from "styled-components"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import LastNews from "./Blog/LastNews";
+import { FaSpinner } from 'react-icons/fa';
 
-export default function Notices(){
+export default function Notices() {
+  const [lastPosts, setLastPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [lastPosts, setLastPosts] = useState([]);
+  useEffect(() => {
+    const URL = "https://api-voecheap.onrender.com/posts";
 
-    useEffect(() => {
-        const URL = "https://api-voecheap.onrender.com/posts";
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(URL);
+        setLastPosts(response.data);
+        setLoading(false);
+      } catch (err) {
+        console.log(err);
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(URL);
-                setLastPosts(response.data);
-            } catch (err) {
-                console.log(err);
-            }
-        };
+  const lastFourPosts = lastPosts.slice(-4);
 
-        fetchData();
-    }, []);
-
-    const lastFourPosts = lastPosts.slice(-4);
-    console.log(lastPosts)
-
-    return(
-        <>
-        <Container id="team">
-           <Title>Últimas Notícias |<span>#voenotícias</span></Title>
-           <LastNotices>
-            {lastFourPosts.map((p, index) => <LastNews p={p} key={index}/>)}
-           </LastNotices>
-           <Separation></Separation>
-        </Container>
-        </>
-    )
+  return (
+    <>
+      <Container id="team">
+        <Title>Últimas Notícias |<span>#voenotícias</span></Title>
+        {loading ? (
+          <div style={{ textAlign: 'center', marginTop: '20px' }}>
+            <FaSpinner size={40} color="#007bff" />
+            <p>Loading...</p>
+          </div>
+        ) : (
+          <LastNotices>
+            {lastFourPosts.map((p, index) => <LastNews p={p} key={index} />)}
+          </LastNotices>
+        )}
+        <Separation></Separation>
+      </Container>
+    </>
+  );
 }
 
 const Container = styled.div`
