@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import Header from "../Components/InitialPage/Header";
 import BlogSlogan from "../Components/InitialPage/Blog/BlogSlogan";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { EditPosts } from "../Components/EditBlog/EditPosts";
+import { useNavigate } from "react-router-dom";
+import UserContext from "../contexts/ContextApi";
 
 export default function BlogEdit() {
 
-    const [lastPosts, setLastPosts] = useState([]);
+    const { lastPosts, setLastPosts } = useContext(UserContext);
     const [showForm, setShowForm] = useState(false);
     const [newNoticeData, setNewNoticeData] = useState({
         text: '',
@@ -41,9 +43,9 @@ export default function BlogEdit() {
     const handleAddNewNotice = () => {
         setShowForm(true);
     };
-    
+
     const handleFormSubmit = async (e) => {
-       console.log(e);
+        console.log(e);
         e.preventDefault();
 
         try {
@@ -75,7 +77,7 @@ export default function BlogEdit() {
             {showForm && (
                 <form onSubmit={handleFormSubmit}>
                     <label>
-                        Texto:
+                        Título:
                         <input
                             type="text"
                             name="text"
@@ -93,12 +95,12 @@ export default function BlogEdit() {
                         />
                     </label>
                     <label>
-                        Link:
-                        <input
-                            type="text"
+                        Texto:
+                        <textarea
                             name="link"
                             value={newNoticeData.link}
                             onChange={handleInputChange}
+                            className="text-input"
                         />
                     </label>
                     <button type="submit">Adicionar</button>
@@ -116,6 +118,26 @@ const Container = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    input{
+        margin-top: 10px;
+       
+    }
+}
+label > textarea.text-input {
+    width: 1000px;
+    height: 500px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-top: 4px;
+    line-height: 1.5;  // Ajuste conforme necessário
+    resize: vertical;  // Permite redimensionar verticalmente
+    /* Adicione outros estilos conforme necessário */
+}
 `
 
 const Notices = styled.div`

@@ -1,25 +1,25 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
+export default function Posts({ p }) {
+  console.log(p);
 
-export default function Posts({p}){
-    console.log(p);
+  return (
+    <>
 
-    return (
-        <>
-        
-        <Contender>
+      <Contender>
         <Img src={p.image} alt="pass" />
         <Column>
-            <Text>
-                {p.text} 
-            </Text>
-            <a href={p.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color:"white" }}>
-          <Info>Ler Mais</Info>
-        </a>
+          <Text>
+            {p.text}
+          </Text>
+          <Link to={`/pagetext/${p.id}`} style={{ textDecoration: 'none', color: 'white' }}>
+            <Info>Ler Mais</Info>
+          </Link>
         </Column>
-    </Contender>
+      </Contender>
     </>
-    )
+  )
 };
 
 

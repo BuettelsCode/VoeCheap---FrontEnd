@@ -12,6 +12,8 @@ import BlogPage from "./Pages/BlogPage.js";
 import BlogEdit from "./Pages/BlogEdit.js";
 import Login from "./Pages/Login.js";
 import WhatsAppIcon from "./Components/WhatssapIcon.js";
+import CreatePacks from "./Pages/CreatePacks.js";
+import BlogText from "./Pages/BlogText.js";
 
 export default function App() {
   return (
@@ -28,6 +30,8 @@ export default function App() {
             <Route path="/information" element={<InformationPage />} />
             <Route path="/blogpage" element={<BlogPage />} />
             <Route path="/blogedit" element={<BlogEdit />} />
+            <Route path="/createpacks" element={<CreatePacks/>}/>
+            <Route path="/pagetext/:postId" element={<BlogText/>} />
             <Route path="/admin" element={<Login />} />
           </Routes>
           <WhatsAppIcon/>
