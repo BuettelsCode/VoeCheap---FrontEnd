@@ -87,7 +87,7 @@ flex-wrap: wrap;
 const Title = styled.h1`
 display: flex;
 margin-top: 40px;
-margin-left: 80px;
+margin-left: 50px;
 font-size: 50px;
 color: #013881;
 span{

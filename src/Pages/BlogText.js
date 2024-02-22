@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Header from "../Components/InitialPage/Header";
 import styled from "styled-components";
+import BlogSlogan from "../Components/InitialPage/Blog/BlogSlogan";
 
 export default function BlogText() {
 
@@ -37,10 +38,12 @@ export default function BlogText() {
     return (
         <Container>
             <Header />
-                <h1>{post.text}</h1>
+            <BlogSlogan />
+            <Title>{post.text}</Title>
             <Conteudo>
-                <h2>{post.link}</h2>
-                </Conteudo>
+                <img src={post.image} alt="img" />
+                <Text>{post.link}</Text>
+            </Conteudo>
         </Container>
     );
 
@@ -53,12 +56,30 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 h1{
-    margin-top: 50px;
-    font-size: 30px;
+    margin-top: 30px;
 }
+
+`
+const Title = styled.h1`
+font-size: 50px;
+font-family: 'Roboto', sans-serif;
+`
+const Text = styled.h2`
+font-size: 30px;
+flex: 1;
+margin-top: 10px;
+padding-bottom: 20px;
+font-family: 'Open Sans', sans-serif;
+
 `
 
 const Conteudo = styled.div`
-width: 800px;
+width: 1000px;
 margin-top: 10px;
+img{
+    width: 1000px;
+        height: 350px;
+        object-fit: cover; 
+  margin-right: 10px;
+}
 `
