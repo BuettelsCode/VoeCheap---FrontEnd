@@ -28,10 +28,10 @@ export default function App() {
             <Route path="/commonpage" element={<CommonPage />} />
             <Route path="/contactpage" element={<ContactPage />} />
             <Route path="/information" element={<InformationPage />} />
-            <Route path="/blogpage" element={<BlogPage />} />
-            <Route path="/blogedit" element={<BlogEdit />} />
+            {/* <Route path="/blogpage" element={<BlogPage />} />
+            <Route path="/blogedit" element={<BlogEdit />} /> */}
             <Route path="/createpacks" element={<CreatePacks/>}/>
-            <Route path="/pagetext/:postId" element={<BlogText/>} />
+            {/* <Route path="/pagetext/:postId" element={<BlogText/>} /> */}
             <Route path="/admin" element={<Login />} />
           </Routes>
           <WhatsAppIcon/>

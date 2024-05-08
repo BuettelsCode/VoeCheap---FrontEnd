@@ -13,7 +13,7 @@ export default function InitialPage() {
             <Header/>
             <Slogan />
             <Packages />
-            <Notices/>
+            {/* <Notices/> */}
             <Clients/>
             <Footer/>
         </Container>

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.ce8d1be4.js",
+    "main.js": "/static/js/main.49893090.js",
     "static/media/photo_Yuri.png": "/static/media/photo_Yuri.70b9fea6382546d1ecfc.png",
     "static/media/photo_Iago.png": "/static/media/photo_Iago.62cc20fb6db9f0ff35ee.png",
     "static/media/photo_Paulo.png": "/static/media/photo_Paulo.5e587968e1b5d609471e.png",
@@ -19,9 +19,9 @@
     "static/media/logoWpp.jpg": "/static/media/logoWpp.8588885edd9c24c77c70.jpg",
     "static/media/logoBranca.png": "/static/media/logoBranca.0d283ea75bb3ed769989.png",
     "index.html": "/index.html",
-    "main.ce8d1be4.js.map": "/static/js/main.ce8d1be4.js.map"
+    "main.49893090.js.map": "/static/js/main.49893090.js.map"
   },
   "entrypoints": [
-    "static/js/main.ce8d1be4.js"
+    "static/js/main.49893090.js"
   ]
 }
