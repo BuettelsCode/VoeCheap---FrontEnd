@@ -141,7 +141,7 @@ const Institucional = styled.div`
     text-align: center; /* Opcional: centraliza o título */
     margin-top: 10px;
     color: white;
-    font-family: 'Gotham', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     font-weight: bold;
     @media (min-width: 750px){
@@ -156,13 +156,14 @@ const Institucional = styled.div`
     margin-bottom: 5px;
     @media (min-width: 750px){
     display: inline;
+    
 }
   }
 
   .column {
     display: flex;
     flex-direction: column;
-    width: 150px; /* Ajuste conforme necessário */
+    width: 170px; /* Ajuste conforme necessário */
 
   }
 
@@ -170,7 +171,7 @@ const Institucional = styled.div`
     margin-bottom: 8px;
     font-size:13.5px;
     color: white;
-    font-family: 'Gotham', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
   a.link {
   text-decoration-color: white/* sua cor desejada */;
@@ -184,8 +185,8 @@ const Newsletter = styled.div`
   text-align: center;
   color: white;
   margin-bottom: 10px;
-  font-family: 'Gotham', sans-serif;
-  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+font-size: 14px;
   @media (min-width: 750px){
     width: 210px;
     text-align: left;
@@ -193,10 +194,11 @@ const Newsletter = styled.div`
   @media (min-width:950px){
     width: 300px;
     h1{
-      font-size:20px;
+      font-size:18px;
     }
   }
   h2{
+    font-size: 14px;
     margin-top: 15px;
   }
 span{
