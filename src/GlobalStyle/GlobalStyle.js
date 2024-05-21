@@ -1,6 +1,16 @@
 import { createGlobalStyle } from "styled-components";
+import Gotham from "../fonts/Gotham-Book.otf";
 
-export const GlobalStyle = createGlobalStyle`html, body, div, span, applet, object, iframe,
+export const GlobalStyle = createGlobalStyle`
+
+@font-face {
+    font-family: 'MyFont';
+    src: url(${Gotham}) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
