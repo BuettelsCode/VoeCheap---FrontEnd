@@ -1,5 +1,4 @@
 import React from 'react';
-import wpp from "../Assets/logoWpp.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 
 
