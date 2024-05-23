@@ -143,7 +143,7 @@ const Text = styled.div`
 `;
 const Price = styled.div`
 width: 100px;
-background-color: #003095;
+background-color: #3464ad;
 z-index: 10px;
 float: right;
 font-family: "Montserrat", sans-serif;
@@ -221,7 +221,7 @@ const scroll = keyframes`
 const ScrollingTextContainer = styled.div`
   width: 100%;
   overflow: hidden;
-  background-color: #003095;
+  background-color: #3464ad;
   color: #eac253;
   display: flex;
   align-items: center;
