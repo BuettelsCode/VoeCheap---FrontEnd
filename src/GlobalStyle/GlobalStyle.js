@@ -37,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    overflow: ${({ isMenuOpen }) => (isMenuOpen ? 'hidden' : 'auto')};
 }
 ol, ul {
 	list-style: none;
