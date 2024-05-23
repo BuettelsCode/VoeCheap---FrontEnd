@@ -23,12 +23,12 @@ export default function Footer() {
             <h1>INSTITUCIONAL</h1>
             <div className="columns-container">
               <div className="column">
-                <a href="#" class="link"><h2>Sobre Nós</h2></a>
-                <a href="#" class="link"><h2>Formas de Pagamento</h2></a>
+                <a href="#" className="link"><h2>Sobre Nós</h2></a>
+                <a href="#" className="link"><h2>Formas de Pagamento</h2></a>
               </div>
               <div className="column">
-                <a href="#" class="link"><h2>Políticas de Privacidade</h2></a>
-                <a href="#" class="link"><h2>Central de Ajuda</h2></a>
+                <a href="#" className="link"><h2>Políticas de Privacidade</h2></a>
+                <a href="#" className="link"><h2>Central de Ajuda</h2></a>
               </div>
             </div>
           </Institucional>

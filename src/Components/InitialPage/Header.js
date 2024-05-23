@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import logo from "../../Assets/logo.png"
-// import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaSearch } from 'react-icons/fa';
 
@@ -16,12 +15,35 @@ export default function Header() {
     setMenuOpen(false);
   };
 
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsSubMenuOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsSubMenuOpen(false);
+  };
+
   return (<>
     <Head>
       <Logo src={logo} alt="logo" />
       <OptionsHeader>
         <Link href="/">HOME</Link>
-        <Link href="#passagens">PASSAGENS</Link>
+        <Link
+          href="#passagens"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          PASSAGENS
+          {isSubMenuOpen && (
+            <SubMenu>
+              <h1>Ver Tudo</h1>
+              <h1>Internacionais</h1>
+              <h1>Nacionais</h1>
+            </SubMenu>
+          )}
+        </Link>
         <Link href="#blog">BLOG</Link>
         <Link href="#sobre">SOBRE NÓS</Link>
         <Link href="#contato">CONTATO</Link>
@@ -76,6 +98,7 @@ const OptionsHeader = styled.div`
 display: flex;
 width: 800px;
 justify-content: space-evenly;
+position: relative;
 @media(max-width:900px){
   display: none;
 }
@@ -155,5 +178,22 @@ const Link = styled.a`
   font-weight: 600;
   &:hover {
     text-decoration: underline;
+  }
+`;
+const SubMenu = styled.div`
+display: flex;
+flex-direction: column;
+position: absolute;
+  top: 30;
+  background: white;
+  z-index:20;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  h1{
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   }
 `;
