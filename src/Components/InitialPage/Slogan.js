@@ -105,7 +105,7 @@ const Container = styled.div`
   width: 100%;
   height: 150px;
   @media(min-width:900px){
-    height: 200px;
+    height: 250px;
   }
 `;
 const Image = styled.div`

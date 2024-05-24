@@ -4,7 +4,7 @@ import { useContext } from "react";
 import UserContext from "../../contexts/ContextApi";
 import { Packet, Image, Destiny, Container, Button } from "../../GlobalStyle/PackCSS";
 
-export default function Pack({ p }) {
+export default function NationalPacks({ p }) {
 
     const { setPackSelect, setPackId } = useContext(UserContext);
 

@@ -1,9 +1,9 @@
-import Pack from "./Pack";
 import { Container, Title, SubTitle } from "../../GlobalStyle/PackagesCSS";
+import NationalPacks from "./NationalPacks";
 
-export default function Packages() {
+export default function NationalPackages() {
 
-  const packs = [
+  const nationalPacks = [
     { id: 1, destiny: "Lisboa", image: "https://encurtador.com.br/mAGS5", price: "R$2.800,00/pessoa", support: "Suporte diário", departureTax: "Taxa de embarque inclusa", baggage: "2 bagagens (1x23kg+1x10kg) + 1 mochila", ticket: "Passagem de ida com volta cancelada" },
     { id: 2, destiny: "Orlando", image: "https://encurtador.com.br/asu14", price: "R$3.050,00/pessoa", support: "Suporte diário", departureTax: "Taxa de embarque inclusa", baggage: "2 bagagens (1x23kg+1x10kg) + 1 mochila", ticket: "Passagens de ida e volta" },
     { id: 3, destiny: "Paris", image: "https://encurtador.com.br/goEU1", price: "R$4.500,00/pessoa", support: "Suporte diário", departureTax: "Taxa de embarque inclusa", baggage: "3 bagagens (2x23kg/1x10kg) + 1 mochila", ticket: "Passagens de ida e volta" },
@@ -15,7 +15,7 @@ export default function Packages() {
 
   return (<>
     <Title>
-      <h1>PASSAGENS <strong>INTERNACIONAIS</strong></h1>
+      <h1>PASSAGENS <strong>NACIONAIS</strong></h1>
       <SubTitle>
         <h2>até 40% de desconto</h2>
         <h2>mais relevantes</h2>
@@ -23,7 +23,7 @@ export default function Packages() {
       </SubTitle>
     </Title>
     <Container id="packages">
-      {packs.map((p, index) => (<Pack p={p} key={index} />))}
+      {nationalPacks.map((p, index) => (<NationalPacks p={p} key={index} />))}
     </Container>
   </>)
 };

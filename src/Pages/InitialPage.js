@@ -5,6 +5,7 @@ import Clients from "../Components/InitialPage/Clients";
 import styled from "styled-components";
 import Footer from "../Components/InitialPage/Footer";
 import Notices from "../Components/InitialPage/Notices";
+import NationalPackages from "../Components/InitialPage/NationalPackages";
 
 export default function InitialPage() {
     
@@ -13,6 +14,7 @@ export default function InitialPage() {
             <Header/>
             <Slogan />
             <Packages />
+            <NationalPackages/>
             {/* <Notices/> */}
             {/* <Clients/> */}
             <Footer/>
