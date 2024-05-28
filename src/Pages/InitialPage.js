@@ -16,7 +16,7 @@ export default function InitialPage() {
             <Packages />
             <NationalPackages/>
             <Clients/>
-            {/* <Notices/> */}
+            <Notices/>
             <Footer/>
         </Container>
     </>)

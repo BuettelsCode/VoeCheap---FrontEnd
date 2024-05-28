@@ -42,7 +42,7 @@ export default function Clients() {
           spaceBetween={350}
           slidesPerView={1}
           navigation={true}
-          loop={true}
+          loop={true} 
           breakpoints={{
             700: {
               slidesPerView: 3,
