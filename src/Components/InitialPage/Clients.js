@@ -1,19 +1,11 @@
 import styled from "styled-components";
-import arrowLeft from "../../Assets/ArrowLeft.png";
-import arrowRight from "../../Assets/ArrowRight.png";
 import foto1 from "../../Assets/foto1.png";
 import foto2 from "../../Assets/foto2.png";
 import foto3 from "../../Assets/foto3.png";
-import { useState } from "react";
 import { ImQuotesLeft } from "react-icons/im";
-import { PiInstagramLogoLight } from "react-icons/pi";
-import { useRef } from "react";
-import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Breakpoints, Pagination, A11y } from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { IoLogoInstagram } from "react-icons/io";
-
 
 import "swiper/css";
 import 'swiper/css/navigation';
@@ -21,9 +13,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 export default function Clients() {
-
-  const carousel = useRef();
-  const [width, setWidth] = useState(0);
 
   const photos = [foto2, foto3, foto1];
   const clientsName = [
@@ -46,8 +35,6 @@ export default function Clients() {
 
   return (
     <>
-      {/* <Contain>
-      </Contain> */}
        <Title>#QUEM<span style={{color:'#546e9e'}}>VOA</span>RECOMENDA</Title>
       <Container id="client">
         <SlideShow
@@ -57,25 +44,24 @@ export default function Clients() {
           navigation={true}
           loop={true}
           breakpoints={{
-            // Defina o breakpoint para 900px
             700: {
               slidesPerView: 3,
               spaceBetween: 375
             },
             1100: {
               slidesPerView: 4,
-              spaceBetween: 300 // Quando a largura for no mínimo 900px, mostre 3 slides por view
+              spaceBetween: 300 
             },
           }}>
           {clients.map((clients, index) =>
             <Slide>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Feedbacks style={{ display: 'flex' }}>
-                  <div style={{ marginRight: '10px', position: 'absolute', left: '0', top: '0', paddingRight: '10px' }}> {/* Espaçamento entre o ícone e o texto */}
-                    <ImQuotesLeft /> {/* Ícone de citação */}
+                  <div style={{ marginRight: '10px', position: 'absolute', left: '0', top: '0', paddingRight: '10px' }}>
+                    <ImQuotesLeft /> 
                   </div>
                   <div>
-                    {clients.text} {/* Texto do cliente */}
+                    {clients.text} 
                   </div>
                 </Feedbacks>
                 <Instagram>
