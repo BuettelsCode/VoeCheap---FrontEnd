@@ -192,7 +192,7 @@ export default function Pack({ p }) {
                             </div>
                             <SubTitles style={{ borderBottom: '2px solid white', display: 'inline-block', paddingBottom: '0px', marginTop: '5px' }}>Telefone de contato:</SubTitles>
                             <label style={{ display: 'flex', flexDirection: 'column' }}>
-                                <input style={{ border: 'none', borderRadius: '30px', width: '110px' }} type="tel" name="phone" />
+                                <input style={{ border: 'none', borderRadius: '30px', width: '150px', paddingLeft:'10px' }} type="tel" name="phone" />
                             </label>
                             <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 <button style={{
